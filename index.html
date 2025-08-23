@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>MWASTECH TECHNOLOGIES - Premium Vending Machines</title>
+    <meta name="description" content="Professional vending machines for milk, cooking oil, and water. Quality dispensing solutions for your business.">
+    
+    <!-- Critical CSS inline for mobile loading -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
+        .navbar { position: fixed; top: 0; width: 100%; background: linear-gradient(90deg, rgba(255, 182, 193, 0.95) 0%, rgba(135, 206, 235, 0.95) 25%, rgba(224, 246, 255, 0.95) 50%, rgba(152, 251, 152, 0.95) 75%, rgba(255, 228, 181, 0.95) 100%); backdrop-filter: blur(15px); z-index: 1000; height: 70px; }
+        .hero { padding: 120px 20px 80px; background: linear-gradient(135deg, #FFB6C1 0%, #87CEEB 25%, #E0F6FF 50%, #98FB98 75%, #FFE4B5 100%); min-height: 100vh; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        img { max-width: 100%; height: auto; }
+    </style>
+    
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="logo/mwastech-logo.png" alt="MWASTECH Technologies Logo" class="logo-image">
+                <div class="logo-text">
+                    <h2>MWASTECH TECHNOLOGIES</h2>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-logo">
+                    <img src="logo/mwastech-logo.png" alt="MWASTECH Technologies" class="hero-logo-image">
+                </div>
+                <h1>Premium Vending Machines for Your Business</h1>
+                <p class="hero-tagline">CONVENIENCE AT YOUR FINGERTIPS</p>
+                <p>Discover our range of professional-grade vending machines for milk, cooking oil, and water dispensing. Built for reliability, efficiency, and customer satisfaction.</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">View Products</a>
+                    <a href="#contact" class="btn btn-secondary">Get Quote</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="ghibli-vending-hero.svg" alt="MWASTECH Vending Solutions" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Why Choose Our Vending Machines?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">💧</div>
+                    <h3>Hygienic Dispensing</h3>
+                    <p>Advanced filtration and sanitization systems ensure the highest quality dispensing for all liquid products.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Touch Screen Interface</h3>
+                    <p>User-friendly touch screen controls make operation simple for customers and maintenance easy for operators.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Energy Efficient</h3>
+                    <p>Designed with energy-saving technology to minimize operational costs while maintaining optimal performance.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Easy Maintenance</h3>
+                    <p>Modular design and accessible components make routine maintenance and servicing straightforward.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Multiple Payment Options</h3>
+                    <p>Accept cash, cards, and mobile payments to maximize customer convenience and sales.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Smart Analytics</h3>
+                    <p>Built-in monitoring systems track sales, inventory levels, and machine performance in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Vending Machine Collection</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="milk-vending-1.jpg" alt="100 Liter Milk Vending Machine" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3>100L Milk Vending Machine</h3>
+                        <p>Compact and efficient milk dispensing solution perfect for small to medium retail locations. Features precision dispensing and temperature control.</p>
+                        <ul class="product-specs">
+                            <li>100-liter capacity</li>
+                            <li>Temperature controlled storage</li>
+                            <li>Precision dispensing system</li>
+                            <li>Compact footprint</li>
+                        </ul>
+                        <button class="btn btn-primary inquiry-btn" data-product="100L Milk Vending Machine">Inquire Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="milk-vending-2.jpg" alt="300 Liter Milk Vending Machine with Touch Screen" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3>300L Touch Screen Milk Vending Machine</h3>
+                        <p>High-capacity milk vending machine with advanced touch screen interface. Ideal for high-traffic locations and busy retail environments.</p>
+                        <ul class="product-specs">
+                            <li>300-liter capacity</li>
+                            <li>Advanced touch screen interface</li>
+                            <li>Multi-payment system</li>
+                            <li>Remote monitoring capabilities</li>
+                        </ul>
+                        <button class="btn btn-primary inquiry-btn" data-product="300L Touch Screen Milk Vending Machine">Inquire Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Milk-Dispensing-ATM-Machine.jpg" alt="Milk Dispensing ATM Machine" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3>Milk Dispensing ATM</h3>
+                        <p>Bank-style ATM design for milk dispensing with secure payment processing and premium user experience. Perfect for upscale locations.</p>
+                        <ul class="product-specs">
+                            <li>ATM-style secure design</li>
+                            <li>Multiple dispensing options</li>
+                            <li>Advanced security features</li>
+                            <li>Premium build quality</li>
+                        </ul>
+                        <button class="btn btn-primary inquiry-btn" data-product="Milk Dispensing ATM">Inquire Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="oil-vending.jpg" alt="Cooking Oil Vending Machine" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3>Cooking Oil Vending Machine</h3>
+                        <p>Specialized vending machine designed for cooking oil dispensing with precise measurement and spill-proof technology.</p>
+                        <ul class="product-specs">
+                            <li>Precision oil dispensing</li>
+                            <li>Spill-proof design</li>
+                            <li>Multiple oil types support</li>
+                            <li>Easy cleaning system</li>
+                        </ul>
+                        <button class="btn btn-primary inquiry-btn" data-product="Cooking Oil Vending Machine">Inquire Now</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="water-vending.jpg" alt="Water Vending Machine" loading="lazy">
+                    </div>
+                    <div class="product-content">
+                        <h3>Water Vending Machine</h3>
+                        <p>High-quality water dispensing machine with advanced filtration system for pure, clean drinking water on demand.</p>
+                        <ul class="product-specs">
+                            <li>Multi-stage filtration</li>
+                            <li>Hot and cold options</li>
+                            <li>Large capacity storage</li>
+                            <li>UV sterilization</li>
+                        </ul>
+                        <button class="btn btn-primary inquiry-btn" data-product="Water Vending Machine">Inquire Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Ready to Start Your Vending Business?</h3>
+                    <p>Contact us today to discuss your vending machine needs. We provide comprehensive consultation, installation, and ongoing support services.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <strong>Phone:</strong> <span>0790019763</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Email:</strong> <span>info@mwastech.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <strong>Business Hours:</strong> <span>Mon-Fri 9AM-6PM</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <label for="product">Interested Product</label>
+                        <select id="product" name="product">
+                            <option value="">Select a product</option>
+                            <option value="100L Milk Vending Machine">100L Milk Vending Machine</option>
+                            <option value="300L Touch Screen Milk Vending Machine">300L Touch Screen Milk Vending Machine</option>
+                            <option value="Milk Dispensing ATM">Milk Dispensing ATM</option>
+                            <option value="Cooking Oil Vending Machine">Cooking Oil Vending Machine</option>
+                            <option value="Water Vending Machine">Water Vending Machine</option>
+                            <option value="Custom Solution">Custom Solution</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your vending machine needs..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>MWASTECH TECHNOLOGIES</h3>
+                    <p>Your trusted partner for premium vending machine solutions. Quality, reliability, and service excellence.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li>Machine Sales</li>
+                        <li>Installation</li>
+                        <li>Maintenance</li>
+                        <li>Support</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MWASTECH TECHNOLOGIES. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Inquiry Modal -->
+    <div id="inquiryModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Product Inquiry</h3>
+            <form id="inquiryForm">
+                <input type="hidden" id="inquiryProduct" name="product">
+                <div class="form-group">
+                    <label for="inquiryName">Full Name</label>
+                    <input type="text" id="inquiryName" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="inquiryEmail">Email Address</label>
+                    <input type="email" id="inquiryEmail" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="inquiryPhone">Phone Number</label>
+                    <input type="tel" id="inquiryPhone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="inquiryMessage">Message</label>
+                    <textarea id="inquiryMessage" name="message" rows="3" placeholder="Please provide details about your requirements..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Inquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+    
+    <!-- CSS Loading Detection Script -->
+    <script>
+        // Check if external CSS loaded properly
+        function checkCSSLoaded() {
+            try {
+                const testElement = document.createElement('div');
+                testElement.className = 'nav-logo';
+                document.body.appendChild(testElement);
+                
+                const computedStyle = window.getComputedStyle(testElement);
+                const isLoaded = computedStyle.display === 'flex';
+                
+                document.body.removeChild(testElement);
+                
+                if (!isLoaded) {
+                    console.warn('External CSS not loaded, applying fallback styles');
+                    loadFallbackCSS();
+                }
+            } catch (e) {
+                console.warn('CSS check failed, loading fallback');
+                loadFallbackCSS();
+            }
+        }
+        
+        function loadFallbackCSS() {
+            const style = document.createElement('style');
+            style.textContent = `
+                body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; }
+                .navbar { background: linear-gradient(90deg, rgba(255, 182, 193, 0.95) 0%, rgba(135, 206, 235, 0.95) 25%, rgba(224, 246, 255, 0.95) 50%, rgba(152, 251, 152, 0.95) 75%, rgba(255, 228, 181, 0.95) 100%); padding: 1rem; position: fixed; top: 0; width: 100%; z-index: 1000; }
+                .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+                .nav-logo { display: flex; align-items: center; gap: 0.5rem; }
+                .nav-logo h2 { color: #1e293b; margin: 0; font-size: 1.2rem; }
+                .logo-image { height: 35px; width: auto; }
+                .nav-menu { display: flex; list-style: none; gap: 1rem; margin: 0; padding: 0; }
+                .nav-link { text-decoration: none; color: #1e293b; padding: 0.5rem 1rem; background: rgba(255,255,255,0.3); border-radius: 6px; }
+                .hamburger { display: none; flex-direction: column; cursor: pointer; }
+                .bar { width: 25px; height: 3px; background: #1e293b; margin: 3px 0; }
+                .hero { padding: 120px 20px 80px; background: linear-gradient(135deg, #FFB6C1 0%, #87CEEB 25%, #E0F6FF 50%, #98FB98 75%, #FFE4B5 100%); min-height: 100vh; }
+                .hero-container { max-width: 1200px; margin: 0 auto; text-align: center; }
+                .hero-content h1 { font-size: 2rem; margin-bottom: 1rem; color: #1e293b; }
+                .hero-tagline { color: #f59e0b; font-weight: bold; margin-bottom: 1rem; }
+                .btn { padding: 14px 28px; background: #2563eb; color: white; text-decoration: none; border-radius: 8px; display: inline-block; margin: 0.5rem; }
+                .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+                .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
+                .product-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+                .product-image { height: 250px; overflow: hidden; }
+                .product-image img { width: 100%; height: 100%; object-fit: cover; }
+                .product-content { padding: 1.5rem; }
+                .contact { padding: 2rem 0; background: white; }
+                .contact-form { background: #f8fafc; padding: 2rem; border-radius: 12px; }
+                .form-group { margin-bottom: 1rem; }
+                .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
+                .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; }
+                .footer { background: #1e293b; color: white; padding: 2rem 0; }
+                @media (max-width: 768px) {
+                    .nav-menu { display: none; }
+                    .hamburger { display: flex; }
+                    .hero-content h1 { font-size: 1.5rem; }
+                    .products-grid { grid-template-columns: 1fr; }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Check CSS loading after page load
+        window.addEventListener('load', function() {
+            setTimeout(checkCSSLoaded, 100);
+        });
+        
+        // Also check immediately in case load event already fired
+        if (document.readyState === 'complete') {
+            setTimeout(checkCSSLoaded, 100);
+        }
+    </script>
+</body>
+</html>
