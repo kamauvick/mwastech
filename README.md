@@ -4,7 +4,7 @@ Professional vending machine showcase website for MWASTECH TECHNOLOGIES.
 
 ## 📁 Package Contents
 
-### Core Files
+### Core Files for the project
 - `index.html` - Main website file (start here)
 - `styles.css` - All styling and responsive design
 - `script.js` - Interactive features and animations
