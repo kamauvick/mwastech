@@ -196,23 +196,6 @@ inquiryForm.addEventListener('submit', async (e) => {
     }
 });
 
-// Lazy loading for images
-const images = document.querySelectorAll('img[loading="lazy"]');
-const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.src;
-            img.classList.remove('lazy');
-            observer.unobserve(img);
-        }
-    });
-});
-
-images.forEach(img => {
-    imageObserver.observe(img);
-});
-
 // Scroll animations
 const animateOnScroll = () => {
     const elements = document.querySelectorAll('.feature-card, .product-card');
@@ -234,9 +217,6 @@ document.querySelectorAll('.feature-card, .product-card').forEach(element => {
     element.style.transform = 'translateY(20px)';
     element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
 });
-
-// Listen for scroll events
-window.addEventListener('scroll', animateOnScroll);
 
 // Run animation on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -267,58 +247,46 @@ document.addEventListener('keydown', (e) => {
 // Focus management for modal
 const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
 
-function trapFocus(element) {
-    const focusableContent = element.querySelectorAll(focusableElements);
+// Keep Tab focus inside the modal while it is open (registered once)
+document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Tab' || modal.style.display !== 'block') return;
+
+    const focusableContent = modal.querySelectorAll(focusableElements);
     const firstFocusableElement = focusableContent[0];
     const lastFocusableElement = focusableContent[focusableContent.length - 1];
 
-    document.addEventListener('keydown', function(e) {
-        const isTabPressed = e.key === 'Tab';
-
-        if (!isTabPressed) return;
-
-        if (e.shiftKey) {
-            if (document.activeElement === firstFocusableElement) {
-                lastFocusableElement.focus();
-                e.preventDefault();
-            }
-        } else {
-            if (document.activeElement === lastFocusableElement) {
-                firstFocusableElement.focus();
-                e.preventDefault();
-            }
+    if (e.shiftKey) {
+        if (document.activeElement === firstFocusableElement) {
+            lastFocusableElement.focus();
+            e.preventDefault();
         }
-    });
-}
+    } else {
+        if (document.activeElement === lastFocusableElement) {
+            firstFocusableElement.focus();
+            e.preventDefault();
+        }
+    }
+});
 
-// Initialize focus trap when modal opens
+// Move focus into the modal when it opens
 inquiryBtns.forEach(btn => {
     btn.addEventListener('click', () => {
         setTimeout(() => {
-            trapFocus(modal);
             document.getElementById('inquiryName').focus();
         }, 100);
     });
 });
 
-// Performance optimization: Debounce scroll events
-function debounce(func, wait = 20, immediate = true) {
-    let timeout;
-    return function() {
-        const context = this, args = arguments;
-        const later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        const callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
-    };
-}
-
-// Apply debounce to scroll events
-window.addEventListener('scroll', debounce(animateOnScroll));
+// Performance optimization: run scroll animations at most once per frame
+let animateScheduled = false;
+window.addEventListener('scroll', () => {
+    if (animateScheduled) return;
+    animateScheduled = true;
+    requestAnimationFrame(() => {
+        animateScheduled = false;
+        animateOnScroll();
+    });
+});
 
 // Add loading states to navigation
 document.querySelectorAll('.nav-link').forEach(link => {
@@ -331,25 +299,6 @@ document.querySelectorAll('.nav-link').forEach(link => {
             }, 500);
         }
     });
-});
-
-// Preload critical images
-const preloadImages = [
-    'ghibli-vending-hero.svg',
-    'milk-vending-1.jpg',
-    'milk-vending-2.jpg',
-    'Milk-Dispensing-ATM-Machine.jpg',
-    'oil-vending.jpg',
-    'water-vending.jpg',
-    'logo/mwastech-logo.png'
-];
-
-preloadImages.forEach(src => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = src;
-    document.head.appendChild(link);
 });
 
 console.log('MWASTECH TECHNOLOGIES website loaded successfully!');
