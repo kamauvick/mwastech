@@ -18,7 +18,8 @@ Professional vending machine showcase website for MWASTECH TECHNOLOGIES.
 - `water-vending.jpg` - Water vending machine
 
 ### Logo
-- `logo/mwastech-logo.png` - Company logo (PNG format)
+- `logo/mwastech-logo-small.png` - Web-sized logo used by the pages (362×360)
+- `logo/mwastech-logo.png` - Company logo (PNG format, full size)
 - `logo/mwastech-logo.jpeg` - Company logo (JPEG format)
 
 ## 🚀 Quick Start
