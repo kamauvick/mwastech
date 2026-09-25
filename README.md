@@ -42,4 +42,6 @@ The quote form doesn't need a server. It opens WhatsApp (`wa.me/254790019763`) w
 
 ## Running and deploying
 
-Open `index.html` in a browser, or upload the folder to any static host (Netlify drag-and-drop, GitHub Pages, cPanel). See `DEPLOYMENT-GUIDE.md`.
+Open `index.html` in a browser to preview. The live site is GitHub Pages at https://kamauvick.github.io/mwastech/. The `gh-pages` branch holds only the served files (`index.html`, `styles.css`, `script.js`, the images the page uses, and `.nojekyll`), and `main` holds this source.
+
+**Every deploy:** change the `?v=` tag on the `styles.css` and `script.js` links in `index.html` (for example `?v=20261002`). Browsers cache these files for about 10 minutes and would otherwise pair the new page with an old stylesheet.
