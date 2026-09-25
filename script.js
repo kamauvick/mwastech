@@ -1,355 +1,294 @@
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navMenu = document.querySelector('.nav-menu');
+/* MWASTECH Technologies — site interactions */
+(() => {
+    'use strict';
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+    const WHATSAPP = '254790019763';
+    const EMAIL = 'info@mwastech.com';
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const $ = (s, el = document) => el.querySelector(s);
+    const $$ = (s, el = document) => [...el.querySelectorAll(s)];
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});
-
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            const navHeight = document.querySelector('.navbar').offsetHeight;
-            const targetPosition = target.offsetTop - navHeight;
-            
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// Navbar background on scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'linear-gradient(90deg, rgba(255, 182, 193, 0.98) 0%, rgba(135, 206, 235, 0.98) 25%, rgba(224, 246, 255, 0.98) 50%, rgba(152, 251, 152, 0.98) 75%, rgba(255, 228, 181, 0.98) 100%)';
-        navbar.style.boxShadow = '0 4px 25px rgba(0, 0, 0, 0.15)';
-        navbar.style.backdropFilter = 'blur(20px)';
-    } else {
-        navbar.style.background = 'linear-gradient(90deg, rgba(255, 182, 193, 0.95) 0%, rgba(135, 206, 235, 0.95) 25%, rgba(224, 246, 255, 0.95) 50%, rgba(152, 251, 152, 0.95) 75%, rgba(255, 228, 181, 0.95) 100%)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        navbar.style.backdropFilter = 'blur(15px)';
-    }
-});
-
-// Modal functionality
-const modal = document.getElementById('inquiryModal');
-const inquiryBtns = document.querySelectorAll('.inquiry-btn');
-const closeBtn = document.querySelector('.close');
-const inquiryForm = document.getElementById('inquiryForm');
-const inquiryProduct = document.getElementById('inquiryProduct');
-
-// Open modal when clicking inquiry buttons
-inquiryBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const productName = btn.getAttribute('data-product');
-        inquiryProduct.value = productName;
-        modal.style.display = 'block';
-        document.body.style.overflow = 'hidden';
-    });
-});
-
-// Close modal
-closeBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto';
-});
-
-// Close modal when clicking outside
-window.addEventListener('click', (e) => {
-    if (e.target === modal) {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-});
-
-// Form submissions
-const contactForm = document.getElementById('contactForm');
-
-function showMessage(form, message, isSuccess = true) {
-    // Remove existing messages
-    const existingMessage = form.querySelector('.success-message, .error-message');
-    if (existingMessage) {
-        existingMessage.remove();
-    }
-
-    // Create new message
-    const messageDiv = document.createElement('div');
-    messageDiv.className = isSuccess ? 'success-message' : 'error-message';
-    messageDiv.textContent = message;
-    form.appendChild(messageDiv);
-
-    // Remove message after 5 seconds
-    setTimeout(() => {
-        messageDiv.remove();
-    }, 5000);
-}
-
-function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-function validateForm(formData) {
-    const errors = [];
-    
-    if (!formData.get('name') || formData.get('name').trim().length < 2) {
-        errors.push('Name must be at least 2 characters long');
-    }
-    
-    if (!formData.get('email') || !validateEmail(formData.get('email'))) {
-        errors.push('Please enter a valid email address');
-    }
-    
-    return errors;
-}
-
-// Contact form submission
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const errors = validateForm(formData);
-    
-    if (errors.length > 0) {
-        showMessage(contactForm, errors[0], false);
-        return;
-    }
-    
-    // Add loading state
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    contactForm.classList.add('loading');
-    
-    try {
-        // Simulate form submission (replace with actual endpoint)
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        showMessage(contactForm, 'Thank you for your inquiry! We will contact you soon.');
-        contactForm.reset();
-    } catch (error) {
-        showMessage(contactForm, 'There was an error sending your message. Please try again.', false);
-    } finally {
-        // Remove loading state
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        contactForm.classList.remove('loading');
-    }
-});
-
-// Inquiry form submission
-inquiryForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(inquiryForm);
-    const errors = validateForm(formData);
-    
-    if (errors.length > 0) {
-        showMessage(inquiryForm, errors[0], false);
-        return;
-    }
-    
-    // Add loading state
-    const submitBtn = inquiryForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-    inquiryForm.classList.add('loading');
-    
-    try {
-        // Simulate form submission (replace with actual endpoint)
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        showMessage(inquiryForm, 'Thank you for your inquiry! We will contact you soon.');
-        inquiryForm.reset();
-        
-        // Close modal after successful submission
-        setTimeout(() => {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }, 2000);
-        
-    } catch (error) {
-        showMessage(inquiryForm, 'There was an error sending your message. Please try again.', false);
-    } finally {
-        // Remove loading state
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-        inquiryForm.classList.remove('loading');
-    }
-});
-
-// Lazy loading for images
-const images = document.querySelectorAll('img[loading="lazy"]');
-const imageObserver = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.src;
-            img.classList.remove('lazy');
-            observer.unobserve(img);
-        }
-    });
-});
-
-images.forEach(img => {
-    imageObserver.observe(img);
-});
-
-// Scroll animations
-const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.feature-card, .product-card');
-    
-    elements.forEach(element => {
-        const elementTop = element.getBoundingClientRect().top;
-        const elementVisible = 150;
-        
-        if (elementTop < window.innerHeight - elementVisible) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }
-    });
-};
-
-// Initial styles for scroll animation
-document.querySelectorAll('.feature-card, .product-card').forEach(element => {
-    element.style.opacity = '0';
-    element.style.transform = 'translateY(20px)';
-    element.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-});
-
-// Listen for scroll events
-window.addEventListener('scroll', animateOnScroll);
-
-// Run animation on page load
-document.addEventListener('DOMContentLoaded', () => {
-    animateOnScroll();
-});
-
-// Auto-populate contact form from URL parameters
-document.addEventListener('DOMContentLoaded', () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const product = urlParams.get('product');
-    
-    if (product) {
-        const productSelect = document.getElementById('product');
-        if (productSelect) {
-            productSelect.value = product;
-        }
-    }
-});
-
-// Keyboard accessibility for modal
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && modal.style.display === 'block') {
-        modal.style.display = 'none';
-        document.body.style.overflow = 'auto';
-    }
-});
-
-// Focus management for modal
-const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
-
-function trapFocus(element) {
-    const focusableContent = element.querySelectorAll(focusableElements);
-    const firstFocusableElement = focusableContent[0];
-    const lastFocusableElement = focusableContent[focusableContent.length - 1];
-
-    document.addEventListener('keydown', function(e) {
-        const isTabPressed = e.key === 'Tab';
-
-        if (!isTabPressed) return;
-
-        if (e.shiftKey) {
-            if (document.activeElement === firstFocusableElement) {
-                lastFocusableElement.focus();
-                e.preventDefault();
-            }
-        } else {
-            if (document.activeElement === lastFocusableElement) {
-                firstFocusableElement.focus();
-                e.preventDefault();
-            }
-        }
-    });
-}
-
-// Initialize focus trap when modal opens
-inquiryBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        setTimeout(() => {
-            trapFocus(modal);
-            document.getElementById('inquiryName').focus();
-        }, 100);
-    });
-});
-
-// Performance optimization: Debounce scroll events
-function debounce(func, wait = 20, immediate = true) {
-    let timeout;
-    return function() {
-        const context = this, args = arguments;
-        const later = function() {
-            timeout = null;
-            if (!immediate) func.apply(context, args);
-        };
-        const callNow = immediate && !timeout;
-        clearTimeout(timeout);
-        timeout = setTimeout(later, wait);
-        if (callNow) func.apply(context, args);
+    /* ---------- Header & navigation ---------- */
+    const header = $('.site-header');
+    const nav = $('#mainNav');
+    const toggle = $('#navToggle');
+    let holdHeader = 0;
+    const setMenu = (open) => {
+        nav.classList.toggle('open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        if (open) header.classList.remove('is-hidden');
     };
-}
+    toggle.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+    $$('a', nav).forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
+    // after an in-page jump the header stays visible, so people can see where they landed
+    // (smooth scrolling turns a jump into many small downward steps, so hold the header for the length of the glide)
+    const holdForJump = () => { header.classList.remove('is-hidden'); holdHeader = Date.now() + 1800; };
+    $$('a[href^="#"]').forEach(a => a.addEventListener('click', holdForJump));
+    window.addEventListener('hashchange', holdForJump);
+    if (location.hash) holdForJump();
 
-// Apply debounce to scroll events
-window.addEventListener('scroll', debounce(animateOnScroll));
+    // Highlight the nav link for the section in view
+    const navLinks = $$('a[href^="#"]', nav);
+    const sectionObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + entry.target.id));
+        });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    $$('main > section').forEach(s => sectionObserver.observe(s));   // sections without a nav link clear the highlight
 
-// Add loading states to navigation
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function(e) {
-        if (this.getAttribute('href').startsWith('#')) {
-            // Add active state briefly
-            this.style.color = '#2563eb';
-            setTimeout(() => {
-                this.style.color = '';
-            }, 500);
-        }
+    /* ---------- Reveal on scroll (groups stagger their children) ---------- */
+    $$('[data-stagger]').forEach(group => {
+        [...group.children].forEach((child, i) => {
+            child.classList.add('reveal');
+            child.style.setProperty('--d', (i * 0.09).toFixed(2) + 's');
+        });
     });
-});
+    const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    $$('.reveal').forEach(el => revealObserver.observe(el));
 
-// Preload critical images
-const preloadImages = [
-    'ghibli-vending-hero.svg',
-    'milk-vending-1.jpg',
-    'milk-vending-2.jpg',
-    'Milk-Dispensing-ATM-Machine.jpg',
-    'oil-vending.jpg',
-    'water-vending.jpg',
-    'logo/mwastech-logo.png'
-];
+    /* ---------- Scroll flow: one rAF loop for everything tied to scroll position ---------- */
+    const TONES = { white: [255, 255, 255], stone: [246, 245, 241] };
+    // only the light sections share the flowing page colour; the dark contact block keeps its own and rises as a sheet
+    const toned = $$('[data-tone]').filter(el => el.dataset.tone !== 'ink');
+    const sheet = $('.contact');
+    const heroEl = $('.hero');
+    const heroCopy = $('[data-hero-copy]');
+    const heroMachine = $('.hero-machine');
+    const heroShape = $('.hero-shape');
+    const heroLine = $('.shape-line');
+    const shopMedia = $$('.shop-media');
+    const wide = window.matchMedia('(min-width: 1081px)');
+    const stacked = window.matchMedia('(max-width: 900px)');
+    const clamp01 = v => Math.min(1, Math.max(0, v));
+    const smooth = t => t * t * (3 - 2 * t);
+    const mix = (a, b, t) => a.map((v, i) => Math.round(v + (b[i] - v) * t));
 
-preloadImages.forEach(src => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.as = 'image';
-    link.href = src;
-    document.head.appendChild(link);
-});
+    let bounds = [], docH = 0, lastY = window.scrollY, lineLive = false, ticking = false;
+    const measure = () => {
+        bounds = toned.map(el => ({ top: el.offsetTop, tone: TONES[el.dataset.tone] || TONES.white }));
+        docH = document.documentElement.scrollHeight - window.innerHeight;
+    };
 
-console.log('MWASTECH TECHNOLOGIES website loaded successfully!');
+    // The page colour glides between neighbouring sections' tones.
+    const paintBackground = (y, vh) => {
+        let colour = bounds[0].tone;
+        for (let i = 0; i < bounds.length - 1; i++) {
+            const cur = bounds[i], next = bounds[i + 1];
+            const focus = y + vh * 0.6;
+            const band = Math.min(vh * 0.5, 420);
+            if (focus < next.top - band / 2) { colour = cur.tone; break; }
+            if (focus <= next.top + band / 2) { colour = mix(cur.tone, next.tone, smooth(clamp01((focus - (next.top - band / 2)) / band))); break; }
+            colour = next.tone;
+        }
+        document.body.style.backgroundColor = `rgb(${colour.join(',')})`;
+    };
+
+    const update = () => {
+        ticking = false;
+        const y = window.scrollY, vh = window.innerHeight;
+
+        // header: solid once scrolled, tucks away going down, comes back going up
+        header.classList.toggle('scrolled', y > 20);
+        if (Math.abs(y - lastY) > vh) header.classList.remove('is-hidden');   // a jump (link, #hash, reload) is not "scrolling down"
+        else if (Date.now() > holdHeader && !nav.classList.contains('open')) {
+            if (y > lastY + 6 && y > vh * 0.6) header.classList.add('is-hidden');
+            else if (y < lastY - 6 || y < vh * 0.6) header.classList.remove('is-hidden');
+        }
+        lastY = y;
+        header.style.setProperty('--progress', docH > 0 ? (y / docH).toFixed(4) : 0);
+
+        if (bounds.length) paintBackground(y, vh);
+        if (reduceMotion) return;
+
+        // contact sheet: inset and rounded while it enters, full width once it reaches the upper part of the screen
+        if (sheet) {
+            const top = sheet.getBoundingClientRect().top;
+            if (top < vh && top > -vh) sheet.style.setProperty('--sheet', (1 - smooth(clamp01((vh - top) / (vh * 0.75)))).toFixed(3));
+        }
+
+        // hero hand-off: the copy lifts away faster, the drawing lags behind, the orange line finishes drawing
+        if (heroEl && y < heroEl.offsetHeight * 1.2) {
+            const p = clamp01(y / heroEl.offsetHeight);
+            heroCopy.style.translate = `0 ${(-p * 90).toFixed(1)}px`;
+            heroCopy.style.opacity = (1 - smooth(clamp01(p * 1.4))).toFixed(3);
+            heroShape.style.translate = `0 ${(p * 40).toFixed(1)}px`;
+            heroMachine.style.translate = stacked.matches ? `-50% ${(p * 30).toFixed(1)}px` : `0 ${(p * 70).toFixed(1)}px`;
+            if (lineLive) heroLine.style.strokeDashoffset = (560 * (1 - smooth(clamp01(p * 1.8)))).toFixed(1);
+        }
+
+        // machine photos float at slightly different speeds (wide screens only)
+        if (wide.matches) {
+            shopMedia.forEach((m, i) => {
+                const r = m.getBoundingClientRect();
+                if (r.bottom < -200 || r.top > vh + 200) return;
+                const off = (r.top + r.height / 2 - vh / 2) * (i % 2 ? 0.05 : -0.035);
+                m.style.translate = `0 ${off.toFixed(1)}px`;
+            });
+        } else if (shopMedia.length && shopMedia[0].style.translate) {
+            shopMedia.forEach(m => { m.style.translate = ''; });
+        }
+    };
+    const requestUpdate = () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } };
+
+    // the load animation draws most of the hero line; after it ends, scrolling draws the rest
+    if (heroLine && !reduceMotion) {
+        heroLine.addEventListener('animationend', () => {
+            heroLine.style.animation = 'none';
+            lineLive = true;
+            update();
+        }, { once: true });
+    }
+
+    document.documentElement.classList.add('flow');
+    measure();
+    update();
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', () => { measure(); requestUpdate(); });
+    window.addEventListener('load', () => { measure(); requestUpdate(); });
+    if ('ResizeObserver' in window) new ResizeObserver(() => { measure(); requestUpdate(); }).observe(document.body);
+
+    /* ---------- How it works: machine switcher ---------- */
+    const tabs = $$('.machine-tab');
+    if (tabs.length) {
+        const panels = $$('.machine-panel');
+        const explainSets = $$('.explain-set');
+        const productSelect = $('#fProduct');
+
+        const select = (tab, focus) => {
+            const id = tab.dataset.machine;
+            tabs.forEach(t => {
+                const on = t === tab;
+                t.setAttribute('aria-selected', String(on));
+                t.tabIndex = on ? 0 : -1;
+            });
+            panels.forEach(p => { p.hidden = p.dataset.machine !== id; });
+            explainSets.forEach(s => { s.hidden = s.dataset.machine !== id; });
+            if (productSelect && tab.dataset.product) productSelect.value = tab.dataset.product;
+            if (focus) tab.focus();
+            if (window.innerWidth < 640) tab.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
+        };
+
+        tabs.forEach((tab, i) => {
+            tab.addEventListener('click', () => select(tab));
+            tab.addEventListener('keydown', e => {
+                const keys = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 };
+                if (e.key in keys) { e.preventDefault(); select(tabs[(i + keys[e.key] + tabs.length) % tabs.length], true); }
+                else if (e.key === 'Home') { e.preventDefault(); select(tabs[0], true); }
+                else if (e.key === 'End') { e.preventDefault(); select(tabs[tabs.length - 1], true); }
+            });
+        });
+    }
+
+    /* ---------- Revenue estimator ---------- */
+    const inL = $('#inLitres'), inP = $('#inPrice'), inD = $('#inDays');
+    if (inL) {
+        const kes = n => 'KES ' + Math.round(n).toLocaleString('en-KE');
+        const fill = el => el.style.setProperty('--p', ((el.value - el.min) / (el.max - el.min) * 100) + '%');
+        // result figures glide to their new value instead of jumping
+        const shown = { month: 0, day: 0, jerry: 0 };
+        let raf = 0;
+        const glide = (target) => {
+            cancelAnimationFrame(raf);
+            const from = { ...shown }, start = performance.now(), dur = reduceMotion ? 0 : 420;
+            const step = (now) => {
+                const t = dur ? Math.min(1, (now - start) / dur) : 1, k = 1 - Math.pow(1 - t, 3);
+                for (const key in target) shown[key] = from[key] + (target[key] - from[key]) * k;
+                $('#resMonth').textContent = kes(shown.month);
+                $('#resDay').textContent = kes(shown.day);
+                $('#resJerry').textContent = Math.round(shown.jerry).toLocaleString('en-KE');
+                if (t < 1) raf = requestAnimationFrame(step);
+            };
+            raf = requestAnimationFrame(step);
+        };
+        const calc = () => {
+            const litres = +inL.value, price = +inP.value, days = +inD.value;
+            $('#outLitres').textContent = litres.toLocaleString('en-KE') + ' L';
+            $('#outPrice').textContent = 'KES ' + price.toFixed(2);
+            $('#outDays').textContent = days + ' days';
+            glide({ month: litres * price * days, day: litres * price, jerry: litres / 20 });
+            [inL, inP, inD].forEach(fill);
+        };
+        [inL, inP, inD].forEach(el => el.addEventListener('input', calc));
+        calc();
+
+        $('#calcCta').addEventListener('click', () => {
+            const msg = $('#fMsg');
+            if (msg && !msg.value.trim()) {
+                msg.value = `I'm planning to sell about ${(+inL.value).toLocaleString('en-KE')} litres a day at KES ${(+inP.value).toFixed(2)} per litre. What machine and running costs would you recommend?`;
+            }
+            const sel = $('#fProduct');
+            if (sel) sel.value = 'Not sure yet';
+        });
+    }
+
+    /* ---------- Product buttons pre-select the form ---------- */
+    const productSelect = $('#fProduct');
+    $$('[data-product]').forEach(btn => btn.addEventListener('click', () => {
+        const name = btn.dataset.product;
+        if (productSelect && [...productSelect.options].some(o => o.value === name)) productSelect.value = name;
+    }));
+
+    /* ---------- Quote form → WhatsApp ---------- */
+    const form = $('#quoteForm');
+    if (form) {
+        const errorEl = $('#formError');
+        const fields = () => ({
+            name: form.name.value.trim(),
+            phone: form.phone.value.trim(),
+            town: form.town.value.trim(),
+            product: form.product.value,
+            message: form.message.value.trim()
+        });
+        const compose = f => [
+            `Hello MWASTECH, my name is ${f.name || '(not given)'}.`,
+            `I'm interested in: ${f.product}`,
+            f.town && `Location: ${f.town}`,
+            f.phone && `Phone: ${f.phone}`,
+            f.message && `\n${f.message}`
+        ].filter(Boolean).join('\n');
+
+        const validate = f => {
+            form.name.removeAttribute('aria-invalid');
+            form.phone.removeAttribute('aria-invalid');
+            if (f.name.length < 2) { form.name.setAttribute('aria-invalid', 'true'); form.name.focus(); return 'Please enter your name.'; }
+            if (f.phone && f.phone.replace(/\D/g, '').length < 9) { form.phone.setAttribute('aria-invalid', 'true'); form.phone.focus(); return 'Please check your phone number.'; }
+            return '';
+        };
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const f = fields();
+            const err = validate(f);
+            errorEl.textContent = err;
+            if (err) return;
+            const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(compose(f))}`;
+            const win = window.open(url, '_blank', 'noopener');
+            if (!win) window.location.href = url;
+        });
+
+        $('#mailAlt').addEventListener('click', e => {
+            const f = fields();
+            e.currentTarget.href = `mailto:${EMAIL}?subject=${encodeURIComponent('Quote request: ' + f.product)}&body=${encodeURIComponent(compose(f))}`;
+        });
+    }
+
+    /* ---------- Floating WhatsApp button steps aside on the contact section (it already has WhatsApp) ---------- */
+    const fab = $('.wa-fab'), contactSec = $('#contact');
+    if (fab && contactSec) {
+        new IntersectionObserver(([e]) => fab.classList.toggle('is-away', e.isIntersecting), { rootMargin: '0px 0px -35% 0px' }).observe(contactSec);
+    }
+
+    /* ---------- Footer year ---------- */
+    const year = $('#year');
+    if (year) year.textContent = new Date().getFullYear();
+})();
