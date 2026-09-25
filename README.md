@@ -1,137 +1,45 @@
-# MWASTECH TECHNOLOGIES - Website Package
+# MWASTECH Technologies — Website
 
-Professional vending machine showcase website for MWASTECH TECHNOLOGIES.
+Static marketing site for MWASTECH Technologies, focused on water purification and water vending machines. Plain HTML, CSS and JavaScript: no build step, no backend.
 
-## 📁 Package Contents
+## Files
 
-### Core Files
-- `index.html` - Main website file (start here)
-- `styles.css` - All styling and responsive design
-- `script.js` - Interactive features and animations
+| Path | Purpose |
+|---|---|
+| `index.html` | The whole page: hero, machines (cut-out photos), How it works (machine picker with isometric drawings), process, earnings estimator, FAQ, contact |
+| `styles.css` | All styling. Colour and font tokens are at the top in `:root` |
+| `script.js` | Navigation, scroll reveals, the machine picker, the estimator and the WhatsApp form |
+| `images/` | Optimised photos, the logo mark and the favicon. `images/cutouts/` holds the background-removed machine photos (transparent WebP) |
+| `logo/`, `*.jpg` in root | Original source images (not used directly by the site) |
+| `tools/isometric.mjs` | Generates the isometric machine drawings (run with Node) |
+| `legacy/` | Earlier versions: the original site, `v2-scroll-lens/`, `v3-isometric/`, and `v4-clean/` (before the scroll-flow work) |
 
-### Images
-- `ghibli-vending-hero.svg` - Custom hero section illustration
-- `milk-vending-1.jpg` - 100L milk vending machine
-- `milk-vending-2.jpg` - 300L touch screen milk vending machine
-- `Milk-Dispensing-ATM-Machine.jpg` - Milk dispensing ATM
-- `oil-vending.jpg` - Cooking oil vending machine
-- `water-vending.jpg` - Water vending machine
+## Editing common things
 
-### Logo
-- `logo/mwastech-logo.png` - Company logo (PNG format)
-- `logo/mwastech-logo.jpeg` - Company logo (JPEG format)
+- **Phone / WhatsApp number**: search `index.html` and `script.js` for `254790019763` and `0790 019 763`.
+- **Email**: search for `info@mwastech.com`.
+- **Social links**: search for `facebook.com`, `youtube.com` and `tiktok.com`.
+- **Machines row**: each `<li class="shop-item">` in `#machines` is one cut-out photo with a name and an "Ask for price" WhatsApp link. New photos should be background-removed PNG/WebP with a transparent background, trimmed tight to the machine.
+- **How it works**: each machine has a `.machine-tab` button and a `.machine-panel` (drawing, steps and the short Inside / Your customer / You notes), linked by `data-machine`. The tab's `data-product` must match an option in `<select id="fProduct">`.
+- **Drawings**: edit the scene functions in `tools/isometric.mjs`, run `node tools/isometric.mjs`, and paste the new SVG from `tools/iso.json` into that machine's `.iso-art`. The step badges (01, 02...) in each drawing should match its step list.
+- **Colours**: change `--blue`, `--aqua` and `--sun` in `:root` in `styles.css`.
 
-## 🚀 Quick Start
+## Scroll flow
 
-### Option 1: Open Locally
-1. Double-click `index.html` to open in your web browser
-2. The website will run locally without internet connection
+Everything tied to scroll position runs in one `requestAnimationFrame` loop in `script.js` ("Scroll flow"):
 
-### Option 2: Upload to Web Hosting
-1. Upload all files to your web hosting provider
-2. Make sure file structure is preserved
-3. Point your domain to `index.html`
+- **Page colour**: each light section has a `data-tone` (`white` or `stone`), and the page background glides between neighbouring tones as you scroll. Add `data-tone` to a new section to include it.
+- **Contact sheet**: the dark contact block (`data-tone="ink"`) keeps its own colour and rises in with rounded shoulders that widen to full width.
+- **Hero hand-off**: the headline lifts away, the drawing lags behind and the orange line finishes drawing.
+- **Header**: tucks away when scrolling down, returns when scrolling up, with an orange progress line.
+- **Reveals**: add `class="reveal"` to one element, or `data-stagger` to a container to stagger its children.
 
-## 🌐 Deployment Options
+With "reduce motion" turned on, the movement is skipped and only the colour change and plain reveals remain.
 
-### Free Hosting Options
-- **Netlify**: Drag and drop the entire folder
-- **Vercel**: Connect to GitHub and deploy
-- **GitHub Pages**: Upload to repository and enable Pages
-- **Firebase Hosting**: Use Firebase CLI
+## How enquiries work
 
-### Paid Hosting Options
-- **cPanel/WHM**: Upload via File Manager
-- **AWS S3**: Static website hosting
-- **DigitalOcean**: App Platform
+The quote form doesn't need a server. It opens WhatsApp (`wa.me/254790019763`) with the customer's name, location, phone, chosen machine and message already filled in. There is also an option to send the same text by email.
 
-## 📱 Features
+## Running and deploying
 
-✅ **Fully Responsive** - Works on desktop, tablet, and mobile  
-✅ **Modern Design** - Professional gradient backgrounds and animations  
-✅ **Product Showcase** - All vending machine types displayed  
-✅ **Contact Forms** - Lead generation ready  
-✅ **SEO Optimized** - Search engine friendly  
-✅ **Fast Loading** - Optimized images and code  
-
-## 🛠️ Customization
-
-### Contact Information
-Edit `index.html` line 202 to update phone number:
-```html
-<strong>Phone:</strong> <span>0790019763</span>
-```
-
-Edit `index.html` line 205 to update email:
-```html
-<strong>Email:</strong> <span>info@mwastech.com</span>
-```
-
-### Adding New Products
-1. Copy an existing product card section in `index.html`
-2. Update the image source, title, and description
-3. Add the new image file to the directory
-
-### Color Scheme
-The website uses a beautiful gradient color scheme:
-- Pink (#FFB6C1)
-- Blue (#87CEEB) 
-- Light Blue (#E0F6FF)
-- Green (#98FB98)
-- Peach (#FFE4B5)
-
-## 📞 Contact Information
-
-**MWASTECH TECHNOLOGIES**  
-Phone: 0790019763  
-Email: info@mwastech.com  
-Tagline: "CONVENIENCE AT YOUR FINGERTIPS"
-
-## 📄 File Structure
-```
-mwastech-website-bundle/
-├── index.html
-├── styles.css
-├── script.js
-├── README.md
-├── logo/
-│   ├── mwastech-logo.png
-│   └── mwastech-logo.jpeg
-├── ghibli-vending-hero.svg
-├── milk-vending-1.jpg
-├── milk-vending-2.jpg
-├── Milk-Dispensing-ATM-Machine.jpg
-├── oil-vending.jpg
-└── water-vending.jpg
-```
-
-## 🔧 Technical Requirements
-
-- **Web Browser**: Any modern browser (Chrome, Firefox, Safari, Edge)
-- **No Database Required**: Static HTML website
-- **No Special Server Requirements**: Works with basic web hosting
-- **Mobile Optimized**: Responsive design for all screen sizes
-
-## 📈 Analytics & SEO
-
-The website is ready for:
-- Google Analytics (add tracking code to `index.html`)
-- Google Search Console
-- Social media meta tags (already included)
-- Schema markup for local business
-
-## 💡 Next Steps
-
-1. **Domain Setup**: Purchase and configure your domain
-2. **Hosting**: Choose from the deployment options above
-3. **Analytics**: Add Google Analytics tracking
-4. **Social Media**: Link your social media accounts
-5. **SEO**: Submit to Google Search Console
-
----
-
-**Created by**: Professional Web Development Team  
-**Date**: August 2024  
-**Version**: 1.0  
-
-For support or customization requests, contact your web development team.
+Open `index.html` in a browser, or upload the folder to any static host (Netlify drag-and-drop, GitHub Pages, cPanel). See `DEPLOYMENT-GUIDE.md`.

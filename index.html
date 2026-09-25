@@ -2,392 +2,366 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>MWASTECH TECHNOLOGIES - Premium Vending Machines</title>
-    <meta name="description" content="Professional vending machines for milk, cooking oil, and water. Quality dispensing solutions for your business.">
-    
-    <!-- Critical CSS inline for mobile loading -->
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; }
-        .navbar { position: fixed; top: 0; width: 100%; background: linear-gradient(90deg, rgba(255, 182, 193, 0.95) 0%, rgba(135, 206, 235, 0.95) 25%, rgba(224, 246, 255, 0.95) 50%, rgba(152, 251, 152, 0.95) 75%, rgba(255, 228, 181, 0.95) 100%); backdrop-filter: blur(15px); z-index: 1000; height: 70px; }
-        .hero { padding: 120px 20px 80px; background: linear-gradient(135deg, #FFB6C1 0%, #87CEEB 25%, #E0F6FF 50%, #98FB98 75%, #FFE4B5 100%); min-height: 100vh; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        img { max-width: 100%; height: auto; }
-    </style>
-    
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MWASTECH Technologies | Water Purification &amp; Vending Machines in Kenya</title>
+    <meta name="description" content="MWASTECH Technologies builds, installs and services water purification and water vending machines in Kenya. Start selling safe drinking water by the litre.">
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MWASTECH Technologies | Water Purification &amp; Vending Machines">
+    <meta property="og:description" content="Water refill stations that turn raw water into safe drinking water, and every litre into income.">
+    <meta property="og:image" content="https://kamauvick.github.io/mwastech/images/water-station-twin.jpg">
+    <meta property="og:url" content="https://kamauvick.github.io/mwastech/">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "MWASTECH Technologies",
+        "slogan": "Convenience at your fingertips",
+        "description": "Water purification and vending machines: sales, installation and maintenance.",
+        "telephone": "+254790019763",
+        "email": "info@mwastech.com",
+        "address": { "@type": "PostalAddress", "addressCountry": "KE" },
+        "sameAs": [
+            "https://www.facebook.com/people/Mwastech/61567382582246/",
+            "https://www.youtube.com/channel/UCVB9tlI_QdvpJxIJPR1wg_Q",
+            "https://www.tiktok.com/@mwastech254kenyagmail.co"
+        ]
+    }
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <img src="logo/mwastech-logo.png" alt="MWASTECH Technologies Logo" class="logo-image">
-                <div class="logo-text">
-                    <h2>MWASTECH TECHNOLOGIES</h2>
-                </div>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#products" class="nav-link">Products</a></li>
-                <li><a href="#features" class="nav-link">Features</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+    <!-- Icon sprite -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <defs>
+            <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.08-.3-.15-1.26-.46-2.39-1.48-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88m8.41-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89a11.82 11.82 0 0 0-3.48-8.41Z"/></symbol>
+            <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M9.1 23.69v-7.98H6.63v-3.67H9.1v-1.58c0-4.09 1.85-5.98 5.86-5.98.4 0 .96.04 1.47.1.4.04.79.1 1.14.2v3.32a8.6 8.6 0 0 0-1.39-.04c-.7 0-1.26.1-1.67.31-.3.15-.52.36-.68.62-.26.42-.38 1-.38 1.75v1.3h3.92l-.39 2.1-.28 1.57h-3.25v8.24C19.4 23.24 24 18.18 24 12.04c0-6.63-5.37-12-12-12S0 5.42 0 12.04c0 5.63 3.87 10.35 9.1 11.65Z"/></symbol>
+            <symbol id="i-yt" viewBox="0 0 24 24"><path fill="currentColor" d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.87.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81ZM9.55 15.57V8.43L15.82 12l-6.27 3.57Z"/></symbol>
+            <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M12.53.02C13.84 0 15.14.01 16.44 0c.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03a10.7 10.7 0 0 1-5.82-1.9c-.01 2.92.01 5.84-.02 8.75a7.6 7.6 0 0 1-1.35 3.94 7.47 7.47 0 0 1-5.91 3.21 7.3 7.3 0 0 1-4.08-1.03 7.54 7.54 0 0 1-3.65-5.71c-.02-.5-.03-1-.01-1.49a7.52 7.52 0 0 1 8.73-6.68c.02 1.48-.04 2.96-.04 4.44a3.43 3.43 0 0 0-4.38 2.12c-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07Z"/></symbol>
+            <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></symbol>
+            <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></g></symbol>
+            <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+            <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+            <symbol id="i-drop" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.5c3.8 4.6 6.5 8.3 6.5 11.6a6.5 6.5 0 0 1-13 0C5.5 10.8 8.2 7.1 12 2.5Z"/></symbol>
+        </defs>
+    </svg>
+
+    <!-- Header -->
+    <header class="site-header" id="top">
+        <div class="container header-inner">
+            <a href="#top" class="brand" aria-label="MWASTECH Technologies home">
+                <img src="images/logo-mark.png" alt="" width="44" height="40">
+                <span class="brand-text"><strong>MWASTECH</strong><em>Technologies</em></span>
+            </a>
+            <nav class="main-nav" id="mainNav" aria-label="Main">
+                <a href="#machines">Machines</a>
+                <a href="#how">How it works</a>
+                <a href="#earnings">Earnings</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a class="btn btn-sun btn-sm header-cta" href="#contact">Get a quote</a>
+            <span class="scroll-progress" aria-hidden="true"></span>
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mainNav">
+                <span></span><span></span><span></span>
+            </button>
         </div>
-    </nav>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-logo">
-                    <img src="logo/mwastech-logo.png" alt="MWASTECH Technologies" class="hero-logo-image">
-                </div>
-                <h1>Premium Vending Machines for Your Business</h1>
-                <p class="hero-tagline">CONVENIENCE AT YOUR FINGERTIPS</p>
-                <p>Discover our range of professional-grade vending machines for milk, cooking oil, and water dispensing. Built for reliability, efficiency, and customer satisfaction.</p>
-                <div class="hero-buttons">
-                    <a href="#products" class="btn btn-primary">View Products</a>
-                    <a href="#contact" class="btn btn-secondary">Get Quote</a>
+    <main>
+        <!-- Hero -->
+        <section class="hero" data-tone="white">
+            <div class="hero-art" aria-hidden="true">
+                <svg class="hero-shape" viewBox="0 0 800 720" preserveAspectRatio="none">
+                    <path class="shape-fill" d="M104 0 L800 0 L800 640 L292 404 Q196 360 176 262 Z"/>
+                    <path class="shape-line" d="M204 430 Q230 482 318 520 L760 716"/>
+                </svg>
+                <div class="hero-machine" style="aspect-ratio: 327 / 339"><svg viewBox="-114.3 -120.5 327.4 338.5" role="img" aria-hidden="true" aria-label="Isometric view of a water refill station: keypads on the splash-back, tall arched taps over a steel basin, printed cabinet panels" style="width: 100%; height: 100%; display: block; overflow: visible;"><path d="M-23.4 37.5 L-15.6 42.0 L-15.6 33.0 L-23.4 28.5 Z" fill="#E2EAF0" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-7.8 37.5 L-15.6 42.0 L-15.6 33.0 L-7.8 28.5 Z" fill="#B5C6D3" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-15.6 24.0 L-7.8 28.5 L-15.6 33.0 L-23.4 28.5 Z" fill="#F7FAFC" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M171.5 150.0 L179.3 154.5 L179.3 145.5 L171.5 141.0 Z" fill="#E2EAF0" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M187.1 150.0 L179.3 154.5 L179.3 145.5 L187.1 141.0 Z" fill="#B5C6D3" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M179.3 136.5 L187.1 141.0 L179.3 145.5 L171.5 141.0 Z" fill="#F7FAFC" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-88.3 75.0 L-80.5 79.5 L-80.5 70.5 L-88.3 66.0 Z" fill="#E2EAF0" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-72.7 75.0 L-80.5 79.5 L-80.5 70.5 L-72.7 66.0 Z" fill="#B5C6D3" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-80.5 61.5 L-72.7 66.0 L-80.5 70.5 L-88.3 66.0 Z" fill="#F7FAFC" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M106.5 187.5 L114.3 192.0 L114.3 183.0 L106.5 178.5 Z" fill="#E2EAF0" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M122.1 187.5 L114.3 192.0 L114.3 183.0 L122.1 178.5 Z" fill="#B5C6D3" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M114.3 174.0 L122.1 178.5 L114.3 183.0 L106.5 178.5 Z" fill="#F7FAFC" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-88.3 66.0 L114.3 183.0 L114.3 114.0 L-88.3 -3.0 Z" fill="#E2EAF0" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M187.1 141.0 L114.3 183.0 L114.3 114.0 L187.1 72.0 Z" fill="#B5C6D3" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-15.6 -45.0 L187.1 72.0 L114.3 114.0 L-88.3 -3.0 Z" fill="#F7FAFC" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M44.2 -4.5 L44.2 -69.0 L43.0 -76.0 L39.6 -80.8 L34.4 -82.9" fill="none" stroke="#0B2236" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path><path d="M44.2 -4.5 L44.2 -69.0 L43.0 -76.0 L39.6 -80.8 L34.4 -82.9" fill="none" stroke="#EEF3F7" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M44.2 -4.5 L44.2 -69.0 L43.0 -76.0 L39.6 -80.8 L34.4 -82.9" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M85.7 19.5 L85.7 -45.0 L84.6 -52.0 L81.2 -56.8 L76.0 -58.9" fill="none" stroke="#0B2236" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path><path d="M85.7 19.5 L85.7 -45.0 L84.6 -52.0 L81.2 -56.8 L76.0 -58.9" fill="none" stroke="#EEF3F7" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M85.7 19.5 L85.7 -45.0 L84.6 -52.0 L81.2 -56.8 L76.0 -58.9" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M-36.4 -33.0 L166.3 84.0 L166.3 27.0 L-36.4 -90.0 Z" fill="#E2EAF0" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M174.1 79.5 L166.3 84.0 L166.3 27.0 L174.1 22.5 Z" fill="#B5C6D3" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-28.6 -94.5 L174.1 22.5 L166.3 27.0 L-36.4 -90.0 Z" fill="#F7FAFC" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-32.5 -34.4 L162.4 78.1 L162.4 28.3 L-32.5 -84.2 Z" fill="#3FA9FF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-32.5 -47.3 L-20.3 -42.0 L-8.1 -34.8 L4.1 -25.9 L16.2 -17.3 L28.4 -10.7 L40.6 -5.7 L52.8 -0.0 L65.0 7.8 L77.1 16.9 L89.3 25.0 L101.5 30.9 L113.7 35.9 L125.8 42.1 L138.0 50.5 L150.2 59.6 L162.4 67.1 L162.4 78.1 L-32.5 -34.4 Z" fill="#A5E0FA"></path><path d="M-18.8 -61.7 L148.7 35.0 L148.7 24.1 L-18.8 -72.7 Z" fill="#FFFFFF"></path><text transform="matrix(0.8660 0.5 0 1 65.0 -16.0)" text-anchor="middle" font-family="Sora, sans-serif" font-weight="800" font-size="7.9" fill="#0670D0">WATER REFILL STATION</text><text transform="matrix(0.8660 0.5 0 1 65.0 -0.7)" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-style="italic" font-size="9.0" fill="#FFE3E3">Purified Drinking Water</text><path d="M-32.5 -34.4 L162.4 78.1 L162.4 28.3 L-32.5 -84.2 Z" fill="none" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M93.5 -12.0 L118.2 2.2 L118.2 -20.3 L93.5 -34.5 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M129.9 -4.5 L118.2 2.2 L118.2 -20.3 L129.9 -27.0 Z" fill="#9FCFF2" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M105.2 -41.3 L129.9 -27.0 L118.2 -20.3 L93.5 -34.5 Z" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M96.1 -13.5 L115.6 -2.3 L115.6 -18.8 L96.1 -30.0 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M98.6 -22.3 L113.2 -13.9 L113.2 -18.5 L98.6 -26.9 Z" fill="#B8F0C8" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><circle cx="101.0" cy="-13.0" r="1.9" fill="#FFFFFF"></circle><circle cx="101.0" cy="-15.2" r="1.9" fill="#FFFFFF"></circle><circle cx="101.0" cy="-17.5" r="1.9" fill="#FFFFFF"></circle><circle cx="105.9" cy="-10.1" r="1.9" fill="#FFFFFF"></circle><circle cx="105.9" cy="-12.4" r="1.9" fill="#FFFFFF"></circle><circle cx="105.9" cy="-14.7" r="1.9" fill="#FFFFFF"></circle><circle cx="110.7" cy="-7.3" r="1.9" fill="#FFFFFF"></circle><circle cx="110.7" cy="-9.6" r="1.9" fill="#FFFFFF"></circle><circle cx="110.7" cy="-11.9" r="1.9" fill="#FFFFFF"></circle><path d="M129.9 9.0 L154.6 23.3 L154.6 0.8 L129.9 -13.5 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M166.3 16.5 L154.6 23.3 L154.6 0.8 L166.3 -6.0 Z" fill="#9FCFF2" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M141.6 -20.3 L166.3 -6.0 L154.6 0.8 L129.9 -13.5 Z" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M132.5 7.5 L152.0 18.8 L152.0 2.3 L132.5 -9.0 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M134.9 -1.3 L149.6 7.1 L149.6 2.5 L134.9 -5.9 Z" fill="#B8F0C8" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><circle cx="137.4" cy="8.0" r="1.9" fill="#FFFFFF"></circle><circle cx="137.4" cy="5.8" r="1.9" fill="#FFFFFF"></circle><circle cx="137.4" cy="3.5" r="1.9" fill="#FFFFFF"></circle><circle cx="142.2" cy="10.9" r="1.9" fill="#FFFFFF"></circle><circle cx="142.2" cy="8.6" r="1.9" fill="#FFFFFF"></circle><circle cx="142.2" cy="6.3" r="1.9" fill="#FFFFFF"></circle><circle cx="147.1" cy="13.7" r="1.9" fill="#FFFFFF"></circle><circle cx="147.1" cy="11.4" r="1.9" fill="#FFFFFF"></circle><circle cx="147.1" cy="9.1" r="1.9" fill="#FFFFFF"></circle><clipPath id="h0-rs-sink"><path d="M-29.9 -21.8 L146.8 80.3 L110.4 101.3 L-66.3 -0.8 Z"></path></clipPath><g clip-path="url(#rs-sink)"><path d="M-29.9 -5.2 L146.8 96.8 L110.4 117.8 L-66.3 15.7 Z" fill="#B9CAD6" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-29.9 -5.2 L146.8 96.8 L146.8 80.3 L-29.9 -21.8 Z" fill="#C9D7E1" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-29.9 -5.2 L-66.3 15.7 L-66.3 -0.8 L-29.9 -21.8 Z" fill="#DCE6EE" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="24.7" cy="47.2" rx="5.9" ry="3.4" fill="#7F97A8" stroke="#0B2236" stroke-width="1.2"></ellipse></g><path d="M-29.9 -21.8 L146.8 80.3 L110.4 101.3 L-66.3 -0.8 Z" fill="none" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M34.4 -82.9 L28.1 -81.9 L21.3 -78.0 L14.9 -71.6 L9.8 -63.6 L6.4 -54.9 L5.2 -46.5 L5.2 -22.5" fill="none" stroke="#0B2236" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path><path d="M34.4 -82.9 L28.1 -81.9 L21.3 -78.0 L14.9 -71.6 L9.8 -63.6 L6.4 -54.9 L5.2 -46.5 L5.2 -22.5" fill="none" stroke="#EEF3F7" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M34.4 -82.9 L28.1 -81.9 L21.3 -78.0 L14.9 -71.6 L9.8 -63.6 L6.4 -54.9 L5.2 -46.5 L5.2 -22.5" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M76.0 -58.9 L69.6 -57.9 L62.9 -54.0 L56.5 -47.6 L51.3 -39.6 L47.9 -30.9 L46.8 -22.5 L46.8 1.5" fill="none" stroke="#0B2236" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path><path d="M76.0 -58.9 L69.6 -57.9 L62.9 -54.0 L56.5 -47.6 L51.3 -39.6 L47.9 -30.9 L46.8 -22.5 L46.8 1.5" fill="none" stroke="#EEF3F7" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M76.0 -58.9 L69.6 -57.9 L62.9 -54.0 L56.5 -47.6 L51.3 -39.6 L47.9 -30.9 L46.8 -22.5 L46.8 1.5" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M-13.0 -19.5 L-13.0 -37.5 L-13.5 -40.3 L-14.8 -42.2 L-16.9 -43.0 L-19.4 -42.6 L-22.1 -41.1 L-24.7 -38.5 L-26.8 -35.3 L-28.1 -31.8 L-28.6 -28.5 L-28.6 -18.0" fill="none" stroke="#0B2236" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path><path d="M-13.0 -19.5 L-13.0 -37.5 L-13.5 -40.3 L-14.8 -42.2 L-16.9 -43.0 L-19.4 -42.6 L-22.1 -41.1 L-24.7 -38.5 L-26.8 -35.3 L-28.1 -31.8 L-28.6 -28.5 L-28.6 -18.0" fill="none" stroke="#EEF3F7" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M-13.0 -19.5 L-13.0 -37.5 L-13.5 -40.3 L-14.8 -42.2 L-16.9 -43.0 L-19.4 -42.6 L-22.1 -41.1 L-24.7 -38.5 L-26.8 -35.3 L-28.1 -31.8 L-28.6 -28.5 L-28.6 -18.0" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><clipPath id="h0-rs-rev"><path d="M-29.9 -21.8 L146.8 80.3 L110.4 101.3 L-66.3 -0.8 Z"></path><path d="M-66.3 -0.8 L110.4 101.3 L146.8 80.3 L146.8 -9999.0 L-66.3 -9999.0 Z"></path></clipPath><g clip-path="url(#rs-rev)"><path d="M-15.6 33.0 L7.8 46.5 L7.8 16.5 L-15.6 3.0 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M26.0 36.0 L7.8 46.5 L7.8 16.5 L26.0 6.0 Z" fill="#4FB8E6" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M2.6 -7.5 L26.0 6.0 L7.8 16.5 L-15.6 3.0 Z" fill="#E8F7FF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-0.6 1.1 L-0.6 -6.4 L11.0 0.4 L11.0 7.9" fill="none" stroke="#0B2236" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M-0.6 1.1 L-0.6 -6.4 L11.0 0.4 L11.0 7.9" fill="none" stroke="#E8F7FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M-0.6 1.1 L-0.6 -6.4 L11.0 0.4 L11.0 7.9" fill="none" stroke="transparent" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path></g><path class="e-drip" style="animation-delay:0.0s" d="M5.2 -22.5 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path class="e-drip" style="animation-delay:0.4s" d="M5.2 -22.5 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path class="e-drip" style="animation-delay:0.8s" d="M5.2 -22.5 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path class="e-drip" style="animation-delay:0.0s" d="M46.8 1.5 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path class="e-drip" style="animation-delay:0.4s" d="M46.8 1.5 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path class="e-drip" style="animation-delay:0.8s" d="M46.8 1.5 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path d="M-78.5 65.7 L-20.3 99.3 L-20.3 42.3 L-78.5 8.7 Z" fill="#3FA9FF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-78.5 46.3 L-74.8 46.4 L-71.2 48.7 L-67.5 53.0 L-63.9 56.9 L-60.3 58.4 L-56.6 58.2 L-53.0 58.8 L-49.4 61.8 L-45.7 66.3 L-42.1 69.6 L-38.5 70.4 L-34.8 70.2 L-31.2 71.4 L-27.5 75.0 L-23.9 79.4 L-20.3 82.1 L-20.3 99.3 L-78.5 65.7 Z" fill="#A5E0FA"></path><path d="M-74.4 27.2 L-24.3 56.1 L-24.3 43.5 L-74.4 14.7 Z" fill="#FFFFFF"></path><text transform="matrix(0.8660 0.5 0 1 -49.4 38.4)" text-anchor="middle" font-family="Sora, sans-serif" font-weight="800" font-size="8.3" fill="#0670D0">PURIFIED</text><text transform="matrix(0.8660 0.5 0 1 -49.4 52.0)" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-style="italic" font-size="6.8" fill="#FFFFFF">Drinking Water</text><path d="M-78.5 65.7 L-20.3 99.3 L-20.3 42.3 L-78.5 8.7 Z" fill="none" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-16.1 101.7 L42.1 135.3 L42.1 78.3 L-16.1 44.7 Z" fill="#3FA9FF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-16.1 80.1 L-12.5 82.9 L-8.8 87.3 L-5.2 90.9 L-1.6 92.0 L2.1 91.7 L5.7 92.6 L9.4 96.1 L13.0 100.5 L16.6 103.5 L20.3 103.9 L23.9 103.7 L27.5 105.4 L31.2 109.4 L34.8 113.6 L38.5 115.8 L42.1 115.8 L42.1 135.3 L-16.1 101.7 Z" fill="#A5E0FA"></path><path d="M-12.0 63.2 L38.0 92.1 L38.0 79.5 L-12.0 50.7 Z" fill="#FFFFFF"></path><text transform="matrix(0.8660 0.5 0 1 13.0 74.4)" text-anchor="middle" font-family="Sora, sans-serif" font-weight="800" font-size="8.3" fill="#0670D0">PURIFIED</text><text transform="matrix(0.8660 0.5 0 1 13.0 88.0)" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-style="italic" font-size="6.8" fill="#FFFFFF">Drinking Water</text><path d="M-16.1 101.7 L42.1 135.3 L42.1 78.3 L-16.1 44.7 Z" fill="none" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M46.2 137.7 L104.4 171.3 L104.4 114.3 L46.2 80.7 Z" fill="#3FA9FF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M46.2 117.1 L49.9 121.6 L53.5 124.8 L57.2 125.5 L60.8 125.2 L64.4 126.6 L68.1 130.4 L71.7 134.8 L75.3 137.2 L79.0 137.4 L82.6 137.4 L86.3 139.5 L89.9 143.7 L93.5 147.7 L97.2 149.4 L100.8 149.3 L104.4 149.7 L104.4 171.3 L46.2 137.7 Z" fill="#A5E0FA"></path><path d="M50.3 99.2 L100.4 128.1 L100.4 115.5 L50.3 86.7 Z" fill="#FFFFFF"></path><text transform="matrix(0.8660 0.5 0 1 75.3 110.4)" text-anchor="middle" font-family="Sora, sans-serif" font-weight="800" font-size="8.3" fill="#0670D0">PURIFIED</text><text transform="matrix(0.8660 0.5 0 1 75.3 124.0)" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-style="italic" font-size="6.8" fill="#FFFFFF">Drinking Water</text><path d="M46.2 137.7 L104.4 171.3 L104.4 114.3 L46.2 80.7 Z" fill="none" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M179.3 139.5 L122.1 172.5 L122.1 115.5 L179.3 82.5 Z" fill="#3FA9FF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M179.3 119.8 L175.7 124.0 L172.1 126.3 L168.6 126.3 L165.0 126.3 L161.4 128.6 L157.8 132.9 L154.3 136.7 L150.7 138.2 L147.1 137.9 L143.5 138.5 L140.0 141.5 L136.4 145.9 L132.8 149.2 L129.3 150.0 L125.7 149.7 L122.1 150.9 L122.1 172.5 L179.3 139.5 Z" fill="#A5E0FA"></path><path d="M175.3 100.9 L126.1 129.3 L126.1 116.8 L175.3 88.4 Z" fill="#FFFFFF"></path><text transform="matrix(0.8660 -0.5 0 1 150.7 111.8)" text-anchor="middle" font-family="Sora, sans-serif" font-weight="800" font-size="8.1" fill="#0670D0">PURIFIED</text><text transform="matrix(0.8660 -0.5 0 1 150.7 125.4)" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-style="italic" font-size="6.7" fill="#FFFFFF">Drinking Water</text><path d="M179.3 139.5 L122.1 172.5 L122.1 115.5 L179.3 82.5 Z" fill="none" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path></svg></div>
+            </div>
+            <svg class="drop-outline d1" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c3.8 4.6 6.5 8.3 6.5 11.6a6.5 6.5 0 0 1-13 0C5.5 10.8 8.2 7.1 12 2.5Z"/></svg>
+            <svg class="drop-outline d2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5c3.8 4.6 6.5 8.3 6.5 11.6a6.5 6.5 0 0 1-13 0C5.5 10.8 8.2 7.1 12 2.5Z"/></svg>
+            <span class="dot-soft d3" aria-hidden="true"></span>
+            <div class="container">
+                <div class="hero-copy" data-hero-copy>
+                    <h1>Pure water.<br>Steady business.</h1>
+                    <p class="lead">Water vending machines, installed and serviced in Kenya.</p>
+                    <a class="btn btn-sun" href="#contact">Get a quote</a>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="ghibli-vending-hero.svg" alt="MWASTECH Vending Solutions" loading="lazy">
+        </section>
+
+        <!-- Machines -->
+        <section class="shop" id="machines" data-tone="stone">
+            <div class="container">
+                <h2 class="section-title reveal">Machines</h2>
+                <ul class="shop-grid" data-stagger>
+                    <li class="shop-item">
+                        <a href="https://wa.me/254790019763?text=Hello%20MWASTECH%2C%20I'd%20like%20the%20price%20of%20the%20Water%20vending%20station." target="_blank" rel="noopener">
+                            <span class="shop-media"><img src="images/cutouts/twin.webp" alt="Water vending station" loading="lazy"></span>
+                            <span class="shop-name">Water vending station</span>
+                            <span class="shop-sub">Twin tap, stainless steel</span>
+                            <span class="shop-cta">Ask for price</span>
+                        </a>
+                    </li>
+                    <li class="shop-item">
+                        <a href="https://wa.me/254790019763?text=Hello%20MWASTECH%2C%20I'd%20like%20the%20price%20of%20the%20Refill%20station." target="_blank" rel="noopener">
+                            <span class="shop-media"><img src="images/cutouts/counter.webp" alt="Refill station" loading="lazy"></span>
+                            <span class="shop-name">Refill station</span>
+                            <span class="shop-sub">1, 5, 10 and 20 litre fills</span>
+                            <span class="shop-cta">Ask for price</span>
+                        </a>
+                    </li>
+                    <li class="shop-item">
+                        <a href="https://wa.me/254790019763?text=Hello%20MWASTECH%2C%20I'd%20like%20the%20price%20of%20the%20Twin-bay%20kiosk." target="_blank" rel="noopener">
+                            <span class="shop-media"><img src="images/cutouts/kiosk.webp" alt="Twin-bay kiosk" loading="lazy"></span>
+                            <span class="shop-name">Twin-bay kiosk</span>
+                            <span class="shop-sub">Two customers at once</span>
+                            <span class="shop-cta">Ask for price</span>
+                        </a>
+                    </li>
+                    <li class="shop-item">
+                        <a href="https://wa.me/254790019763?text=Hello%20MWASTECH%2C%20I'd%20like%20the%20price%20of%20the%20Milk%20ATM." target="_blank" rel="noopener">
+                            <span class="shop-media"><img src="images/cutouts/milkatm.webp" alt="Milk ATM" loading="lazy"></span>
+                            <span class="shop-name">Milk ATM</span>
+                            <span class="shop-sub">Fresh milk, kept cold</span>
+                            <span class="shop-cta">Ask for price</span>
+                        </a>
+                    </li>
+                </ul>
+                <p class="shop-more reveal">Also available: cooking oil vending machines and purification units. <a href="#contact">Ask us</a></p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features">
-        <div class="container">
-            <h2>Why Choose Our Vending Machines?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">💧</div>
-                    <h3>Hygienic Dispensing</h3>
-                    <p>Advanced filtration and sanitization systems ensure the highest quality dispensing for all liquid products.</p>
+        <!-- How it works -->
+        <section class="how" id="how" data-tone="white">
+            <div class="container">
+                <h2 class="section-title reveal">How it works</h2>
+                <div class="machine-tabs reveal" style="--d:.08s" role="tablist" aria-label="Machines">
+                    <button class="machine-tab" role="tab" id="tab-water" aria-controls="panel-water" aria-selected="true" tabindex="0" data-machine="water" data-product="Water vending station">Water vending station</button>
+                    <button class="machine-tab" role="tab" id="tab-kiosk" aria-controls="panel-kiosk" aria-selected="false" tabindex="-1" data-machine="kiosk" data-product="Twin-bay kiosk">Twin-bay kiosk</button>
+                    <button class="machine-tab" role="tab" id="tab-milk" aria-controls="panel-milk" aria-selected="false" tabindex="-1" data-machine="milk" data-product="Milk ATM">Milk ATM</button>
+                    <button class="machine-tab" role="tab" id="tab-oil" aria-controls="panel-oil" aria-selected="false" tabindex="-1" data-machine="oil" data-product="Cooking oil vending">Cooking oil vending</button>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📱</div>
-                    <h3>Touch Screen Interface</h3>
-                    <p>User-friendly touch screen controls make operation simple for customers and maintenance easy for operators.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Energy Efficient</h3>
-                    <p>Designed with energy-saving technology to minimize operational costs while maintaining optimal performance.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔧</div>
-                    <h3>Easy Maintenance</h3>
-                    <p>Modular design and accessible components make routine maintenance and servicing straightforward.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">💰</div>
-                    <h3>Multiple Payment Options</h3>
-                    <p>Accept cash, cards, and mobile payments to maximize customer convenience and sales.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Smart Analytics</h3>
-                    <p>Built-in monitoring systems track sales, inventory levels, and machine performance in real-time.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section id="products" class="products">
-        <div class="container">
-            <h2>Our Vending Machine Collection</h2>
-            <div class="products-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="milk-vending-1.jpg" alt="100 Liter Milk Vending Machine" loading="lazy">
-                    </div>
-                    <div class="product-content">
-                        <h3>100L Milk Vending Machine</h3>
-                        <p>Compact and efficient milk dispensing solution perfect for small to medium retail locations. Features precision dispensing and temperature control.</p>
-                        <ul class="product-specs">
-                            <li>100-liter capacity</li>
-                            <li>Temperature controlled storage</li>
-                            <li>Precision dispensing system</li>
-                            <li>Compact footprint</li>
-                        </ul>
-                        <button class="btn btn-primary inquiry-btn" data-product="100L Milk Vending Machine">Inquire Now</button>
+                <div class="machine-panel" id="panel-water" role="tabpanel" aria-labelledby="tab-water" data-machine="water">
+                    <div class="iso-art"><svg viewBox="-280.6 -123.7 654.8 506.7" role="img" aria-label="Cutaway of a water vending station: feed tank, sediment, carbon, reverse osmosis and UV stages, clean tank and keypad tap" style="width: 100%; height: 100%; display: block; overflow: visible;"><path d="M-254.6 156.0 L93.5 357.0 L93.5 348.0 L-254.6 147.0 Z" fill="#D6E9F5" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M348.1 210.0 L93.5 357.0 L93.5 348.0 L348.1 201.0 Z" fill="#BFDCEF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M0.0 0.0 L348.1 201.0 L93.5 348.0 L-254.6 147.0 Z" fill="#EEF6FB" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M74.0 65.3 L235.1 158.3 L235.1 44.3 L74.0 -48.8 Z" fill="#EAF4FA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M241.6 154.5 L235.1 158.3 L235.1 44.3 L241.6 40.5 Z" fill="#C8E3F4" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M80.5 -52.5 L241.6 40.5 L235.1 44.3 L74.0 -48.8 Z" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M31.2 55.5 L75.3 81.0" fill="none" stroke="#0B2236" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M31.2 55.5 L75.3 81.0" fill="none" stroke="#E4F2F9" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M31.2 55.5 L75.3 81.0" fill="none" stroke="#B08A57" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M75.3 81.0 L189.7 147.0" fill="none" stroke="#0B2236" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M75.3 81.0 L189.7 147.0" fill="none" stroke="#E4F2F9" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M75.3 81.0 L189.7 147.0" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M189.7 147.0 L231.2 177.0" fill="none" stroke="#0B2236" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M189.7 147.0 L231.2 177.0" fill="none" stroke="#E4F2F9" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M189.7 147.0 L231.2 177.0" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M-43.2 -24.0 L-43.2 51.0 A43.2 24.9 0 0 0 43.2 51.0 L43.2 -24.0 A43.2 24.9 0 0 1 -43.2 -24.0 Z" fill="#C9A77A" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="0.0" cy="-24.0" rx="43.2" ry="24.9" fill="#D8BD94" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M-45.9 -54.0 L-45.9 51.0 A45.9 26.5 0 0 0 45.9 51.0 L45.9 -54.0 A45.9 26.5 0 0 1 -45.9 -54.0 Z" fill="#FFFFFF" fill-opacity="0.28" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="0.0" cy="-54.0" rx="45.9" ry="26.5" fill="#FFFFFF" fill-opacity="0.6" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M-28.5 -38.3 L-28.5 30.0" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8"></path><path d="M-46.8 -59.4 L-46.8 -54.0 A46.8 27.0 0 0 0 46.8 -54.0 L46.8 -59.4 A46.8 27.0 0 0 1 -46.8 -59.4 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="0.0" cy="-59.4" rx="46.8" ry="27.0" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M60.7 33.0 L60.7 96.0 A17.3 10.0 0 0 0 95.2 96.0 L95.2 33.0 A17.3 10.0 0 0 1 60.7 33.0 Z" fill="#E9D6B5" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="77.9" cy="33.0" rx="17.3" ry="10.0" fill="#E9D6B5" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M59.6 24.0 L59.6 96.0 A18.4 10.6 0 0 0 96.3 96.0 L96.3 24.0 A18.4 10.6 0 0 1 59.6 24.0 Z" fill="#FFFFFF" fill-opacity="0.28" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="77.9" cy="24.0" rx="18.4" ry="10.6" fill="#FFFFFF" fill-opacity="0.6" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M66.6 34.8 L66.6 81.6" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8"></path><path d="M59.2 18.6 L59.2 24.0 A18.7 10.8 0 0 0 96.7 24.0 L96.7 18.6 A18.7 10.8 0 0 1 59.2 18.6 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="77.9" cy="18.6" rx="18.7" ry="10.8" fill="#5CB6FF" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M93.1 51.8 L93.1 114.8 A17.3 10.0 0 0 0 127.7 114.8 L127.7 51.8 A17.3 10.0 0 0 1 93.1 51.8 Z" fill="#2B3440" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="110.4" cy="51.8" rx="17.3" ry="10.0" fill="#2B3440" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M92.0 42.8 L92.0 114.8 A18.4 10.6 0 0 0 128.8 114.8 L128.8 42.8 A18.4 10.6 0 0 1 92.0 42.8 Z" fill="#FFFFFF" fill-opacity="0.28" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="110.4" cy="42.8" rx="18.4" ry="10.6" fill="#FFFFFF" fill-opacity="0.6" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M99.0 53.5 L99.0 100.3" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8"></path><path d="M91.7 37.3 L91.7 42.8 A18.7 10.8 0 0 0 129.2 42.8 L129.2 37.3 A18.7 10.8 0 0 1 91.7 37.3 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="110.4" cy="37.3" rx="18.7" ry="10.8" fill="#5CB6FF" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M125.4 54.7 L125.4 135.7 A21.4 12.4 0 0 0 168.2 135.7 L168.2 54.7 A21.4 12.4 0 0 1 125.4 54.7 Z" fill="#CFEAF7" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="146.8" cy="54.7" rx="21.4" ry="12.4" fill="#CFEAF7" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M124.0 45.7 L124.0 135.7 A22.8 13.2 0 0 0 169.6 135.7 L169.6 45.7 A22.8 13.2 0 0 1 124.0 45.7 Z" fill="#FFFFFF" fill-opacity="0.28" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="146.8" cy="45.7" rx="22.8" ry="13.2" fill="#FFFFFF" fill-opacity="0.6" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M132.7 59.2 L132.7 117.7" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8"></path><path d="M123.6 40.3 L123.6 45.7 A23.2 13.4 0 0 0 170.0 45.7 L170.0 40.3 A23.2 13.4 0 0 1 123.6 40.3 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="146.8" cy="40.3" rx="23.2" ry="13.4" fill="#5CB6FF" stroke="#0B2236" stroke-width="1.6"></ellipse><g><path d="M118.2 120.8 Q 146.8 128.8 175.4 120.7" fill="none" stroke="#6AA9CF" stroke-width="1.2"></path><path d="M118.2 107.3 Q 146.8 115.3 175.4 107.2" fill="none" stroke="#6AA9CF" stroke-width="1.2"></path><path d="M118.2 93.8 Q 146.8 101.8 175.4 93.7" fill="none" stroke="#6AA9CF" stroke-width="1.2"></path><path d="M118.2 80.3 Q 146.8 88.3 175.4 80.2" fill="none" stroke="#6AA9CF" stroke-width="1.2"></path><path d="M118.2 66.8 Q 146.8 74.8 175.4 66.7" fill="none" stroke="#6AA9CF" stroke-width="1.2"></path></g><path d="M170.7 75.8 L170.7 156.8 A12.5 7.2 0 0 0 195.7 156.8 L195.7 75.8 A12.5 7.2 0 0 1 170.7 75.8 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="183.2" cy="75.8" rx="12.5" ry="7.2" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M177.3 86.3 L177.3 146.3 A5.9 3.4 0 0 0 189.0 146.3 L189.0 86.3 A5.9 3.4 0 0 1 177.3 86.3 Z" fill="#C4B5FD" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round" class="e-uv"></path><ellipse cx="183.2" cy="86.3" rx="5.9" ry="3.4" fill="#EDE9FE" stroke="#0B2236" stroke-width="1.6" class="e-uv"></ellipse><path d="M194.1 126.0 L194.1 195.0 A39.7 22.9 0 0 0 273.5 195.0 L273.5 126.0 A39.7 22.9 0 0 1 194.1 126.0 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="233.8" cy="126.0" rx="39.7" ry="22.9" fill="#B5E6FA" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M191.6 102.0 L191.6 195.0 A42.3 24.4 0 0 0 276.1 195.0 L276.1 102.0 A42.3 24.4 0 0 1 191.6 102.0 Z" fill="#FFFFFF" fill-opacity="0.28" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="233.8" cy="102.0" rx="42.3" ry="24.4" fill="#FFFFFF" fill-opacity="0.6" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M207.6 116.0 L207.6 176.4" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8"></path><path d="M190.7 96.6 L190.7 102.0 A43.1 24.9 0 0 0 276.9 102.0 L276.9 96.6 A43.1 24.9 0 0 1 190.7 96.6 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="233.8" cy="96.6" rx="43.1" ry="24.9" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M202.6 202.5 L124.7 247.5" fill="none" stroke="#0B2236" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M202.6 202.5 L124.7 247.5" fill="none" stroke="#E4F2F9" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M202.6 202.5 L124.7 247.5" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M-62.4 234.0 L93.5 324.0 L93.5 255.0 L-62.4 165.0 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M166.3 282.0 L93.5 324.0 L93.5 255.0 L166.3 213.0 Z" fill="#9FCFF2" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M10.4 123.0 L166.3 213.0 L93.5 255.0 L-62.4 165.0 Z" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M5.2 141.0 L135.1 216.0 L90.9 241.5 L-39.0 166.5 Z" fill="#CFE6F3" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M1.3 128.2 L157.2 218.3 L157.2 155.3 L1.3 65.2 Z" fill="#EAF4FA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M166.3 213.0 L157.2 218.3 L157.2 155.3 L166.3 150.0 Z" fill="#9FCFF2" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M10.4 60.0 L166.3 150.0 L157.2 155.3 L1.3 65.2 Z" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M9.1 83.3 L149.4 164.3 L149.4 153.8 L9.1 72.8 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M16.9 129.8 L42.9 144.8 L42.9 108.8 L16.9 93.8 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M20.1 109.3 L39.6 120.6 L39.6 110.5 L20.1 99.2 Z" fill="#B8F0C8" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><circle cx="23.4" cy="128.6" r="1.9" fill="#FFFFFF"></circle><circle cx="23.4" cy="123.6" r="1.9" fill="#FFFFFF"></circle><circle cx="23.4" cy="118.7" r="1.9" fill="#FFFFFF"></circle><circle cx="29.9" cy="132.3" r="1.9" fill="#FFFFFF"></circle><circle cx="29.9" cy="127.4" r="1.9" fill="#FFFFFF"></circle><circle cx="29.9" cy="122.4" r="1.9" fill="#FFFFFF"></circle><circle cx="36.4" cy="136.1" r="1.9" fill="#FFFFFF"></circle><circle cx="36.4" cy="131.1" r="1.9" fill="#FFFFFF"></circle><circle cx="36.4" cy="126.2" r="1.9" fill="#FFFFFF"></circle><path d="M79.2 134.2 L57.2 147.0 L57.2 156.0" fill="none" stroke="#0B2236" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path><path d="M79.2 134.2 L57.2 147.0 L57.2 156.0" fill="none" stroke="#E4F2F9" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M79.2 134.2 L57.2 147.0 L57.2 156.0" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M126.0 161.3 L103.9 174.0 L103.9 183.0" fill="none" stroke="#0B2236" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path><path d="M126.0 161.3 L103.9 174.0 L103.9 183.0" fill="none" stroke="#E4F2F9" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M126.0 161.3 L103.9 174.0 L103.9 183.0" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-drip" style="animation-delay:0.0s" d="M57.2 157.5 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path class="e-drip" style="animation-delay:0.4s" d="M57.2 157.5 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path class="e-drip" style="animation-delay:0.8s" d="M57.2 157.5 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path d="M35.1 185.3 L58.5 198.8 L58.5 170.3 L35.1 156.8 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M77.9 187.5 L58.5 198.8 L58.5 170.3 L77.9 159.0 Z" fill="#4FB8E6" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M54.6 145.5 L77.9 159.0 L58.5 170.3 L35.1 156.8 Z" fill="#E8F7FF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M50.7 154.5 L50.7 147.0 L62.4 153.8 L62.4 161.3" fill="none" stroke="#0B2236" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M50.7 154.5 L50.7 147.0 L62.4 153.8 L62.4 161.3" fill="none" stroke="#E8F7FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M50.7 154.5 L50.7 147.0 L62.4 153.8 L62.4 161.3" fill="none" stroke="transparent" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><g class="e-badge"><circle cx="0.0" cy="-78.0" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="0.0" y="-73.8" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">01</text></g><g class="e-badge"><circle cx="77.9" cy="3.0" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="77.9" y="7.2" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">02</text></g><g class="e-badge"><circle cx="110.4" cy="21.8" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="110.4" y="25.9" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">03</text></g><g class="e-badge"><circle cx="146.8" cy="24.7" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="146.8" y="28.9" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">04</text></g><g class="e-badge"><circle cx="183.2" cy="56.3" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="183.2" y="60.5" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">05</text></g><g class="e-badge"><circle cx="103.9" cy="153.0" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="103.9" y="157.2" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">06</text></g></svg></div>
+                    <div class="panel-copy">
+                        <ol class="flow-steps">
+                            <li style="--i:0"><span class="fs-n">01</span><div><strong>Feed tank</strong><p>Borehole, county or rain water is stored.</p></div></li>
+                            <li style="--i:1"><span class="fs-n">02</span><div><strong>Sediment</strong><p>Traps sand, silt and rust.</p></div></li>
+                            <li style="--i:2"><span class="fs-n">03</span><div><strong>Carbon</strong><p>Removes chlorine, odour and bad taste.</p></div></li>
+                            <li style="--i:3"><span class="fs-n">04</span><div><strong>Reverse osmosis</strong><p>Holds back salts, metals and fluoride.</p></div></li>
+                            <li style="--i:4"><span class="fs-n">05</span><div><strong>UV lamp</strong><p>Stops bacteria and viruses.</p></div></li>
+                            <li style="--i:5"><span class="fs-n">06</span><div><strong>Keypad tap</strong><p>Measures out 1 to 20 litres.</p></div></li>
+                        </ol>
+                        <dl class="explain">
+                            <div><dt>Inside</dt><dd>Feed tank, four treatment stages, clean-water tank and a keypad tap in one stainless cabinet.</dd></div>
+                            <div><dt>Your customer</dt><dd>Brings a container, picks an amount, pays and fills.</dd></div>
+                            <div><dt>You</dt><dd>Keep the feed tank topped up. We schedule the filter changes.</dd></div>
+                        </dl>
                     </div>
                 </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="milk-vending-2.jpg" alt="300 Liter Milk Vending Machine with Touch Screen" loading="lazy">
-                    </div>
-                    <div class="product-content">
-                        <h3>300L Touch Screen Milk Vending Machine</h3>
-                        <p>High-capacity milk vending machine with advanced touch screen interface. Ideal for high-traffic locations and busy retail environments.</p>
-                        <ul class="product-specs">
-                            <li>300-liter capacity</li>
-                            <li>Advanced touch screen interface</li>
-                            <li>Multi-payment system</li>
-                            <li>Remote monitoring capabilities</li>
-                        </ul>
-                        <button class="btn btn-primary inquiry-btn" data-product="300L Touch Screen Milk Vending Machine">Inquire Now</button>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="Milk-Dispensing-ATM-Machine.jpg" alt="Milk Dispensing ATM Machine" loading="lazy">
-                    </div>
-                    <div class="product-content">
-                        <h3>Milk Dispensing ATM</h3>
-                        <p>Bank-style ATM design for milk dispensing with secure payment processing and premium user experience. Perfect for upscale locations.</p>
-                        <ul class="product-specs">
-                            <li>ATM-style secure design</li>
-                            <li>Multiple dispensing options</li>
-                            <li>Advanced security features</li>
-                            <li>Premium build quality</li>
-                        </ul>
-                        <button class="btn btn-primary inquiry-btn" data-product="Milk Dispensing ATM">Inquire Now</button>
+                <div class="machine-panel" id="panel-kiosk" role="tabpanel" aria-labelledby="tab-kiosk" data-machine="kiosk" hidden>
+                    <div class="iso-art"><svg viewBox="-187.1 -158.0 485.9 443.5" role="img" aria-label="Isometric view of a twin-bay water vending kiosk fed by a purification unit" style="width: 100%; height: 100%; display: block; overflow: visible;"><path d="M-161.1 102.0 L111.7 259.5 L111.7 250.5 L-161.1 93.0 Z" fill="#D6E9F5" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M272.8 166.5 L111.7 259.5 L111.7 250.5 L272.8 157.5 Z" fill="#BFDCEF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M0.0 0.0 L272.8 157.5 L111.7 250.5 L-161.1 93.0 Z" fill="#EEF6FB" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-49.4 43.5 L13.0 79.5 L13.0 -4.5 L-49.4 -40.5 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M59.8 52.5 L13.0 79.5 L13.0 -4.5 L59.8 -31.5 Z" fill="#9FCFF2" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-2.6 -67.5 L59.8 -31.5 L13.0 -4.5 L-49.4 -40.5 Z" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-41.6 36.0 L5.2 63.0 L5.2 3.0 L-41.6 -24.0 Z" fill="#CFE6F3" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-11.0 -75.0 L-11.0 -48.0 A11.0 6.4 0 0 0 11.0 -48.0 L11.0 -75.0 A11.0 6.4 0 0 1 -11.0 -75.0 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="0.0" cy="-75.0" rx="11.0" ry="6.4" fill="#5CB6FF" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M12.4 -61.5 L12.4 -34.5 A11.0 6.4 0 0 0 34.4 -34.5 L34.4 -61.5 A11.0 6.4 0 0 1 12.4 -61.5 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="23.4" cy="-61.5" rx="11.0" ry="6.4" fill="#5CB6FF" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M36.4 51.0 L70.1 70.5" fill="none" stroke="#0B2236" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M36.4 51.0 L70.1 70.5" fill="none" stroke="#E4F2F9" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M36.4 51.0 L70.1 70.5" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M31.2 102.0 L171.5 183.0 L171.5 -15.0 L31.2 -96.0 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M233.8 147.0 L171.5 183.0 L171.5 -15.0 L233.8 -51.0 Z" fill="#9FCFF2" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M93.5 -132.0 L233.8 -51.0 L171.5 -15.0 L31.2 -96.0 Z" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M36.4 -75.0 L166.3 0.0 L166.3 -13.5 L36.4 -88.5 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M41.6 72.0 L96.1 103.5 L96.1 7.5 L41.6 -24.0 Z" fill="#8FB8D2" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M106.5 109.5 L161.1 141.0 L161.1 45.0 L106.5 13.5 Z" fill="#8FB8D2" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M54.6 -27.0 L83.1 -10.5 L83.1 -40.5 L54.6 -57.0 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M58.1 -43.5 L79.6 -31.2 L79.6 -39.6 L58.1 -51.9 Z" fill="#B8F0C8" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><circle cx="61.7" cy="-27.0" r="1.9" fill="#FFFFFF"></circle><circle cx="61.7" cy="-31.1" r="1.9" fill="#FFFFFF"></circle><circle cx="61.7" cy="-35.2" r="1.9" fill="#FFFFFF"></circle><circle cx="68.8" cy="-22.9" r="1.9" fill="#FFFFFF"></circle><circle cx="68.8" cy="-27.0" r="1.9" fill="#FFFFFF"></circle><circle cx="68.8" cy="-31.1" r="1.9" fill="#FFFFFF"></circle><circle cx="76.0" cy="-18.8" r="1.9" fill="#FFFFFF"></circle><circle cx="76.0" cy="-22.9" r="1.9" fill="#FFFFFF"></circle><circle cx="76.0" cy="-27.0" r="1.9" fill="#FFFFFF"></circle><path d="M119.5 10.5 L148.1 27.0 L148.1 -3.0 L119.5 -19.5 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M123.1 -6.0 L144.5 6.3 L144.5 -2.1 L123.1 -14.4 Z" fill="#B8F0C8" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><circle cx="126.7" cy="10.5" r="1.9" fill="#FFFFFF"></circle><circle cx="126.7" cy="6.4" r="1.9" fill="#FFFFFF"></circle><circle cx="126.7" cy="2.3" r="1.9" fill="#FFFFFF"></circle><circle cx="133.8" cy="14.6" r="1.9" fill="#FFFFFF"></circle><circle cx="133.8" cy="10.5" r="1.9" fill="#FFFFFF"></circle><circle cx="133.8" cy="6.4" r="1.9" fill="#FFFFFF"></circle><circle cx="140.9" cy="18.7" r="1.9" fill="#FFFFFF"></circle><circle cx="140.9" cy="14.6" r="1.9" fill="#FFFFFF"></circle><circle cx="140.9" cy="10.5" r="1.9" fill="#FFFFFF"></circle><path d="M76.6 -12.8 L76.6 -2.3" fill="none" stroke="#0B2236" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path><path d="M76.6 -12.8 L76.6 -2.3" fill="none" stroke="#E4F2F9" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M76.6 -12.8 L76.6 -2.3" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M141.6 24.8 L141.6 35.3" fill="none" stroke="#0B2236" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path><path d="M141.6 24.8 L141.6 35.3" fill="none" stroke="#E4F2F9" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M141.6 24.8 L141.6 35.3" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-drip" style="animation-delay:0.0s" d="M76.6 -0.8 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path class="e-drip" style="animation-delay:0.4s" d="M76.6 -0.8 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path class="e-drip" style="animation-delay:0.0s" d="M141.6 36.8 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path class="e-drip" style="animation-delay:0.4s" d="M141.6 36.8 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.2"></path><path d="M59.8 79.5 L83.1 93.0 L83.1 61.5 L59.8 48.0 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M101.3 82.5 L83.1 93.0 L83.1 61.5 L101.3 51.0 Z" fill="#4FB8E6" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M77.9 37.5 L101.3 51.0 L83.1 61.5 L59.8 48.0 Z" fill="#E8F7FF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M74.7 46.1 L74.7 38.6 L86.4 45.4 L86.4 52.9" fill="none" stroke="#0B2236" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M74.7 46.1 L74.7 38.6 L86.4 45.4 L86.4 52.9" fill="none" stroke="#E8F7FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M74.7 46.1 L74.7 38.6 L86.4 45.4 L86.4 52.9" fill="none" stroke="transparent" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M124.7 117.0 L148.1 130.5 L148.1 99.0 L124.7 85.5 Z" fill="#7FD3F7" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M166.3 120.0 L148.1 130.5 L148.1 99.0 L166.3 88.5 Z" fill="#4FB8E6" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M142.9 75.0 L166.3 88.5 L148.1 99.0 L124.7 85.5 Z" fill="#E8F7FF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M139.6 83.6 L139.6 76.1 L151.3 82.9 L151.3 90.4" fill="none" stroke="#0B2236" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M139.6 83.6 L139.6 76.1 L151.3 82.9 L151.3 90.4" fill="none" stroke="#E8F7FF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M139.6 83.6 L139.6 76.1 L151.3 82.9 L151.3 90.4" fill="none" stroke="transparent" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><g class="e-badge"><circle cx="5.2" cy="-78.0" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="5.2" y="-73.8" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">01</text></g><g class="e-badge"><circle cx="68.8" cy="-59.3" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="68.8" y="-55.0" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">02</text></g><g class="e-badge"><circle cx="133.8" cy="-21.8" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="133.8" y="-17.6" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">03</text></g><g class="e-badge"><circle cx="155.9" cy="96.0" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="155.9" y="100.2" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">04</text></g></svg></div>
+                    <div class="panel-copy">
+                        <ol class="flow-steps">
+                            <li style="--i:0"><span class="fs-n">01</span><div><strong>Purified supply</strong><p>Treated water fills the kiosk tank.</p></div></li>
+                            <li style="--i:1"><span class="fs-n">02</span><div><strong>Two keypads</strong><p>One per bay, so two people are served at once.</p></div></li>
+                            <li style="--i:2"><span class="fs-n">03</span><div><strong>Choose and pay</strong><p>Pick an amount and pay [confirm: coin, token or M-Pesa].</p></div></li>
+                            <li style="--i:3"><span class="fs-n">04</span><div><strong>Enclosed fill</strong><p>Containers fill inside a closed bay.</p></div></li>
+                        </ol>
+                        <dl class="explain">
+                            <div><dt>Inside</dt><dd>A full-height stainless cabinet with two filling bays, fed by a purification unit.</dd></div>
+                            <div><dt>Your customer</dt><dd>Uses whichever bay is free. Queues move twice as fast.</dd></div>
+                            <div><dt>You</dt><dd>Same routine as a station, with two bays to wipe down.</dd></div>
+                        </dl>
                     </div>
                 </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="oil-vending.jpg" alt="Cooking Oil Vending Machine" loading="lazy">
-                    </div>
-                    <div class="product-content">
-                        <h3>Cooking Oil Vending Machine</h3>
-                        <p>Specialized vending machine designed for cooking oil dispensing with precise measurement and spill-proof technology.</p>
-                        <ul class="product-specs">
-                            <li>Precision oil dispensing</li>
-                            <li>Spill-proof design</li>
-                            <li>Multiple oil types support</li>
-                            <li>Easy cleaning system</li>
-                        </ul>
-                        <button class="btn btn-primary inquiry-btn" data-product="Cooking Oil Vending Machine">Inquire Now</button>
+                <div class="machine-panel" id="panel-milk" role="tabpanel" aria-labelledby="tab-milk" data-machine="milk" hidden>
+                    <div class="iso-art"><svg viewBox="-192.3 -201.5 446.9 464.5" role="img" aria-label="Cutaway of a Milk ATM: chilled milk tank, keypad, metered pump and dispensing window" style="width: 100%; height: 100%; display: block; overflow: visible;"><path d="M-166.3 105.0 L62.4 237.0 L62.4 228.0 L-166.3 96.0 Z" fill="#D6E9F5" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M228.6 141.0 L62.4 237.0 L62.4 228.0 L228.6 132.0 Z" fill="#BFDCEF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M0.0 0.0 L228.6 132.0 L62.4 228.0 L-166.3 96.0 Z" fill="#EEF6FB" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-28.6 82.5 L59.8 133.5 L59.8 -82.5 L-28.6 -133.5 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M44.2 -175.5 L132.5 -124.5 L59.8 -82.5 L-28.6 -133.5 Z" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M132.0 91.2 L59.2 133.2 L59.2 -82.8 L132.0 -124.8 Z" fill="#C9DEEB" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M128.1 87.5 L63.1 125.0 L63.1 92.0 L128.1 54.5 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M123.4 86.2 L118.7 65.0" stroke="#6AA9CF" stroke-width="1.4"></path><path d="M114.1 91.6 L109.4 70.3" stroke="#6AA9CF" stroke-width="1.4"></path><path d="M104.7 97.0 L100.0 75.8" stroke="#6AA9CF" stroke-width="1.4"></path><path d="M95.3 102.4 L90.7 81.2" stroke="#6AA9CF" stroke-width="1.4"></path><path d="M86.0 107.8 L81.3 86.6" stroke="#6AA9CF" stroke-width="1.4"></path><path d="M76.6 113.3 L72.0 91.9" stroke="#6AA9CF" stroke-width="1.4"></path><path d="M59.1 -34.5 L59.1 31.5 A21.4 12.4 0 0 0 102.0 31.5 L102.0 -34.5 A21.4 12.4 0 0 1 59.1 -34.5 Z" fill="#FFF6E0" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="80.5" cy="-34.5" rx="21.4" ry="12.4" fill="#FFFDF6" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M57.8 -52.5 L57.8 31.5 A22.8 13.2 0 0 0 103.3 31.5 L103.3 -52.5 A22.8 13.2 0 0 1 57.8 -52.5 Z" fill="#FFFFFF" fill-opacity="0.28" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="80.5" cy="-52.5" rx="22.8" ry="13.2" fill="#FFFFFF" fill-opacity="0.6" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M66.4 -39.9 L66.4 14.7" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8"></path><path d="M57.3 -57.9 L57.3 -52.5 A23.2 13.4 0 0 0 103.8 -52.5 L103.8 -57.9 A23.2 13.4 0 0 1 57.3 -57.9 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="80.5" cy="-57.9" rx="23.2" ry="13.4" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M40.3 71.3 L55.9 80.3 L55.9 63.8 L40.3 54.7 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M70.1 72.0 L55.9 80.3 L55.9 63.8 L70.1 55.5 Z" fill="#0670D0" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M54.6 46.5 L70.1 55.5 L55.9 63.8 L40.3 54.7 Z" fill="#5CB6FF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M70.1 37.5 L55.9 54.7" fill="none" stroke="#0B2236" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path><path d="M70.1 37.5 L55.9 54.7" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M70.1 37.5 L55.9 54.7" fill="none" stroke="#0A8CFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M132.5 91.5 L59.8 133.5 L59.8 -82.5 L132.5 -124.5 Z" fill="#BFE3F7" fill-opacity=".32" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path class="e-frost" d="M122.1 -100.5 L96.1 -55.5" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"></path><path d="M-22.1 -96.8 L53.3 -53.3 L53.3 -77.3 L-22.1 -120.8 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-18.2 28.5 L28.6 55.5 L28.6 -13.5 L-18.2 -40.5 Z" fill="#8FB8D2" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M33.8 19.5 L54.6 31.5 L54.6 1.5 L33.8 -10.5 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M36.4 2.4 L52.0 11.4 L52.0 3.0 L36.4 -6.0 Z" fill="#B8F0C8" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><circle cx="39.0" cy="18.4" r="1.9" fill="#FFFFFF"></circle><circle cx="39.0" cy="14.3" r="1.9" fill="#FFFFFF"></circle><circle cx="39.0" cy="10.1" r="1.9" fill="#FFFFFF"></circle><circle cx="44.2" cy="21.4" r="1.9" fill="#FFFFFF"></circle><circle cx="44.2" cy="17.3" r="1.9" fill="#FFFFFF"></circle><circle cx="44.2" cy="13.1" r="1.9" fill="#FFFFFF"></circle><circle cx="49.4" cy="24.4" r="1.9" fill="#FFFFFF"></circle><circle cx="49.4" cy="20.3" r="1.9" fill="#FFFFFF"></circle><circle cx="49.4" cy="16.1" r="1.9" fill="#FFFFFF"></circle><path d="M14.3 -32.3 L14.3 -21.8" fill="none" stroke="#0B2236" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"></path><path d="M14.3 -32.3 L14.3 -21.8" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M14.3 -32.3 L14.3 -21.8" fill="none" stroke="transparent" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-drip" style="animation-delay:0.0s" d="M14.3 -20.3 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.2"></path><path class="e-drip" style="animation-delay:0.4s" d="M14.3 -20.3 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.2"></path><path d="M0.2 6.0 L0.2 36.0 A15.4 8.9 0 0 0 31.0 36.0 L31.0 6.0 A15.4 8.9 0 0 1 0.2 6.0 Z" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="15.6" cy="6.0" rx="15.4" ry="8.9" fill="#F1F5F9" stroke="#0B2236" stroke-width="1.6"></ellipse><g class="e-badge"><circle cx="80.5" cy="-67.5" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="80.5" y="-63.3" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">01</text></g><g class="e-badge"><circle cx="44.2" cy="-18.0" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="44.2" y="-13.8" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">02</text></g><g class="e-badge"><circle cx="55.9" cy="72.7" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="55.9" y="76.9" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">03</text></g><g class="e-badge"><circle cx="-16.9" cy="-53.3" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="-16.9" y="-49.0" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">04</text></g></svg></div>
+                    <div class="panel-copy">
+                        <ol class="flow-steps">
+                            <li style="--i:0"><span class="fs-n">01</span><div><strong>Chilled tank</strong><p>Pasteurised milk is kept cold.</p></div></li>
+                            <li style="--i:1"><span class="fs-n">02</span><div><strong>Keypad</strong><p>The customer enters an amount.</p></div></li>
+                            <li style="--i:2"><span class="fs-n">03</span><div><strong>Metered pump</strong><p>A food-grade pump measures it out.</p></div></li>
+                            <li style="--i:3"><span class="fs-n">04</span><div><strong>Daily clean</strong><p>Tank and lines are cleaned after each batch.</p></div></li>
+                        </ol>
+                        <dl class="explain">
+                            <div><dt>Inside</dt><dd>A refrigerated cabinet with a milk tank, food-grade pump and keypad.</dd></div>
+                            <div><dt>Your customer</dt><dd>Chooses an amount and fills a container with cold, fresh milk.</dd></div>
+                            <div><dt>You</dt><dd>Load fresh milk, keep the cooling on, clean after each batch.</dd></div>
+                        </dl>
                     </div>
                 </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="water-vending.jpg" alt="Water Vending Machine" loading="lazy">
-                    </div>
-                    <div class="product-content">
-                        <h3>Water Vending Machine</h3>
-                        <p>High-quality water dispensing machine with advanced filtration system for pure, clean drinking water on demand.</p>
-                        <ul class="product-specs">
-                            <li>Multi-stage filtration</li>
-                            <li>Hot and cold options</li>
-                            <li>Large capacity storage</li>
-                            <li>UV sterilization</li>
-                        </ul>
-                        <button class="btn btn-primary inquiry-btn" data-product="Water Vending Machine">Inquire Now</button>
+                <div class="machine-panel" id="panel-oil" role="tabpanel" aria-labelledby="tab-oil" data-machine="oil" hidden>
+                    <div class="iso-art"><svg viewBox="-197.5 -149.0 467.7 424.0" role="img" aria-label="Isometric view of a cooking oil vending machine: food-grade tank, keypad pump and drip-free nozzle" style="width: 100%; height: 100%; display: block; overflow: visible;"><path d="M-171.5 108.0 L72.7 249.0 L72.7 240.0 L-171.5 99.0 Z" fill="#D6E9F5" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M244.2 150.0 L72.7 249.0 L72.7 240.0 L244.2 141.0 Z" fill="#BFDCEF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M0.0 0.0 L244.2 141.0 L72.7 240.0 L-171.5 99.0 Z" fill="#EEF6FB" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-93.5 72.0 L98.7 183.0 L98.7 111.0 L-93.5 0.0 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M176.7 138.0 L98.7 183.0 L98.7 111.0 L176.7 66.0 Z" fill="#9FCFF2" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-15.6 -45.0 L176.7 66.0 L98.7 111.0 L-93.5 0.0 Z" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-83.1 69.0 L88.3 168.0 L88.3 117.0 L-83.1 18.0 Z" fill="#CFE6F3" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M-44.9 -63.0 L-44.9 -6.0 A34.5 19.9 0 0 0 24.1 -6.0 L24.1 -63.0 A34.5 19.9 0 0 1 -44.9 -63.0 Z" fill="#F5B43C" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="-10.4" cy="-63.0" rx="34.5" ry="19.9" fill="#FAD27F" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M-47.1 -87.0 L-47.1 -6.0 A36.7 21.2 0 0 0 26.3 -6.0 L26.3 -87.0 A36.7 21.2 0 0 1 -47.1 -87.0 Z" fill="#FFFFFF" fill-opacity="0.28" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="-10.4" cy="-87.0" rx="36.7" ry="21.2" fill="#FFFFFF" fill-opacity="0.6" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M-33.2 -74.9 L-33.2 -22.2" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8"></path><path d="M-47.9 -92.4 L-47.9 -87.0 A37.5 21.6 0 0 0 27.1 -87.0 L27.1 -92.4 A37.5 21.6 0 0 1 -47.9 -92.4 Z" fill="#DCEEFA" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="-10.4" cy="-92.4" rx="37.5" ry="21.6" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M15.6 -3.0 L44.2 13.5" fill="none" stroke="#0B2236" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"></path><path d="M15.6 -3.0 L44.2 13.5" fill="none" stroke="#E4F2F9" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M15.6 -3.0 L44.2 13.5" fill="none" stroke="#E08A00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M26.0 36.0 L54.6 52.5 L54.6 13.5 L26.0 -3.0 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M83.1 36.0 L54.6 52.5 L54.6 13.5 L83.1 -3.0 Z" fill="#0670D0" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M54.6 -19.5 L83.1 -3.0 L54.6 13.5 L26.0 -3.0 Z" fill="#5CB6FF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M29.9 33.8 L50.7 45.8 L50.7 17.3 L29.9 5.3 Z" fill="#0A8CFF" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><path d="M32.5 17.6 L48.1 26.6 L48.1 18.6 L32.5 9.6 Z" fill="#B8F0C8" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><circle cx="35.1" cy="32.8" r="1.9" fill="#FFFFFF"></circle><circle cx="35.1" cy="28.9" r="1.9" fill="#FFFFFF"></circle><circle cx="35.1" cy="25.0" r="1.9" fill="#FFFFFF"></circle><circle cx="40.3" cy="35.8" r="1.9" fill="#FFFFFF"></circle><circle cx="40.3" cy="31.9" r="1.9" fill="#FFFFFF"></circle><circle cx="40.3" cy="28.0" r="1.9" fill="#FFFFFF"></circle><circle cx="45.5" cy="38.8" r="1.9" fill="#FFFFFF"></circle><circle cx="45.5" cy="34.9" r="1.9" fill="#FFFFFF"></circle><circle cx="45.5" cy="31.0" r="1.9" fill="#FFFFFF"></circle><path d="M67.5 18.0 L101.3 37.5 L80.5 49.5 L80.5 57.0" fill="none" stroke="#0B2236" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"></path><path d="M67.5 18.0 L101.3 37.5 L80.5 49.5 L80.5 57.0" fill="none" stroke="#E4F2F9" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-flow" d="M67.5 18.0 L101.3 37.5 L80.5 49.5 L80.5 57.0" fill="none" stroke="#E08A00" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path><path class="e-drip" style="animation-delay:0.0s" d="M80.5 58.5 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#F5B43C" stroke="#0B2236" stroke-width="1.2"></path><path class="e-drip" style="animation-delay:0.4s" d="M80.5 58.5 c2.6 3.4 3.8 5.2 3.8 6.6 a3.8 3.8 0 0 1 -7.6 0 c0 -1.4 1.2 -3.2 3.8 -6.6 Z" fill="#F5B43C" stroke="#0B2236" stroke-width="1.2"></path><path d="M68.8 60.0 L68.8 76.5 A11.7 6.8 0 0 0 92.3 76.5 L92.3 60.0 A11.7 6.8 0 0 1 68.8 60.0 Z" fill="#F5B43C" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="80.5" cy="60.0" rx="11.7" ry="6.8" fill="#FAD27F" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M68.0 48.0 L68.0 76.5 A12.5 7.2 0 0 0 93.0 76.5 L93.0 48.0 A12.5 7.2 0 0 1 68.0 48.0 Z" fill="#FFFFFF" fill-opacity="0.28" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="80.5" cy="48.0" rx="12.5" ry="7.2" fill="#FFFFFF" fill-opacity="0.6" stroke="#0B2236" stroke-width="1.6"></ellipse><path d="M72.8 52.3 L72.8 70.8" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" opacity=".8"></path><path d="M75.4 39.0 L75.4 48.0 A5.1 3.0 0 0 0 85.7 48.0 L85.7 39.0 A5.1 3.0 0 0 1 75.4 39.0 Z" fill="#FFFFFF" fill-opacity="0.5" stroke="#0B2236" stroke-width="1.6" stroke-linejoin="round"></path><ellipse cx="80.5" cy="39.0" rx="5.1" ry="3.0" fill="#FFFFFF" stroke="#0B2236" stroke-width="1.6"></ellipse><g class="e-badge"><circle cx="-10.4" cy="-102.0" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="-10.4" y="-97.8" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">01</text></g><g class="e-badge"><circle cx="40.3" cy="-5.3" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="40.3" y="-1.0" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">02</text></g><g class="e-badge"><circle cx="83.1" cy="-18.0" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="83.1" y="-13.8" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">03</text></g><g class="e-badge"><circle cx="80.5" cy="28.5" r="13" fill="#0A8CFF" stroke="#FFFFFF" stroke-width="2.5"></circle><text x="80.5" y="32.7" text-anchor="middle" font-family="Sora, sans-serif" font-weight="700" font-size="11.5" fill="#FFFFFF">04</text></g></svg></div>
+                    <div class="panel-copy">
+                        <ol class="flow-steps">
+                            <li style="--i:0"><span class="fs-n">01</span><div><strong>Food-grade tank</strong><p>Oil is stored in a sealed tank.</p></div></li>
+                            <li style="--i:1"><span class="fs-n">02</span><div><strong>Choose amount</strong><p>The customer enters an amount.</p></div></li>
+                            <li style="--i:2"><span class="fs-n">03</span><div><strong>Measured pump</strong><p>Every sale is measured precisely.</p></div></li>
+                            <li style="--i:3"><span class="fs-n">04</span><div><strong>Drip-free nozzle</strong><p>Straight into the bottle, no spills.</p></div></li>
+                        </ol>
+                        <dl class="explain">
+                            <div><dt>Inside</dt><dd>A sealed food-grade tank, a measuring pump and a drip-free nozzle.</dd></div>
+                            <div><dt>Your customer</dt><dd>Brings a bottle and buys exactly what they need.</dd></div>
+                            <div><dt>You</dt><dd>Refill the tank and wipe the nozzle. Oil keeps well.</dd></div>
+                        </dl>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get in Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Ready to Start Your Vending Business?</h3>
-                    <p>Contact us today to discuss your vending machine needs. We provide comprehensive consultation, installation, and ongoing support services.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <strong>Phone:</strong> <span>0790019763</span>
+        <!-- Earnings -->
+        <section class="earnings" id="earnings" data-tone="white">
+            <div class="container">
+                <div class="earn-card reveal" id="calc">
+                    <div class="earn-inputs">
+                        <h2>What could you earn?</h2>
+                        <label class="range">
+                            <span class="range-top"><span>Litres sold per day</span><output id="outLitres">600 L</output></span>
+                            <input type="range" id="inLitres" min="100" max="3000" step="50" value="600">
+                        </label>
+                        <label class="range">
+                            <span class="range-top"><span>Price per litre</span><output id="outPrice">KES 3.00</output></span>
+                            <input type="range" id="inPrice" min="1" max="10" step="0.5" value="3">
+                        </label>
+                        <label class="range">
+                            <span class="range-top"><span>Days open per month</span><output id="outDays">30 days</output></span>
+                            <input type="range" id="inDays" min="10" max="31" step="1" value="30">
+                        </label>
+                    </div>
+                    <div class="earn-result">
+                        <span class="res-label">Monthly sales</span>
+                        <strong class="res-big" id="resMonth">KES 54,000</strong>
+                        <div class="res-row">
+                            <div><span class="res-label">Per day</span><strong id="resDay">KES 1,800</strong></div>
+                            <div><span class="res-label">20 L refills a day</span><strong id="resJerry">30</strong></div>
                         </div>
-                        <div class="contact-item">
-                            <strong>Email:</strong> <span>info@mwastech.com</span>
-                        </div>
-                        <div class="contact-item">
-                            <strong>Business Hours:</strong> <span>Mon-Fri 9AM-6PM</span>
-                        </div>
+                        <p class="res-note">Before rent, power, water and filters.</p>
+                        <a class="btn btn-sun btn-block" id="calcCta" href="#contact">Talk to us about this</a>
                     </div>
                 </div>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="process" id="setup" data-tone="stone">
+            <div class="container">
+                <h2 class="section-title reveal">We set it up. You sell.</h2>
+                <ol class="process-row" data-stagger>
+                    <li><span>01</span><strong>Consult</strong><p>Tell us your site and water source.</p></li>
+                    <li><span>02</span><strong>Install</strong><p>We deliver and set up the machine.</p></li>
+                    <li><span>03</span><strong>Train</strong><p>You learn to run and clean it.</p></li>
+                    <li><span>04</span><strong>Service</strong><p>Filters and repairs, handled by us.</p></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq" id="faq" data-tone="white">
+            <div class="container faq-grid">
+                <h2 class="section-title reveal">Questions</h2>
+                <div class="faq-list" data-stagger>
+                    <details>
+                        <summary>What water source can I use?</summary>
+                        <p>Borehole, well, county supply or harvested rainwater. Tell us your source and we'll recommend the treatment it needs.</p>
+                    </details>
+                    <details>
+                        <summary>Do you install the machine?</summary>
+                        <p>Yes. We deliver, install and train you or your attendant.</p>
+                    </details>
+                    <details>
+                        <summary>Who services it after I buy?</summary>
+                        <p>We do, including filter replacement, so the water stays safe.</p>
+                    </details>
+                    <details>
+                        <summary>How much does a machine cost?</summary>
+                        <p>It depends on the model and your daily volume. Send us your location and plans for a quote.</p>
+                    </details>
+                    <details>
+                        <summary>Can I sell milk or cooking oil too?</summary>
+                        <p>Yes. We also supply Milk ATMs and cooking oil vending machines.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact" id="contact" data-tone="ink">
+            <div class="container contact-grid">
+                <div class="contact-info reveal">
+                    <h2>Let's talk.</h2>
+                    <a class="contact-phone" href="tel:+254790019763">0790 019 763</a>
+                    <ul class="contact-links">
+                        <li><a href="https://wa.me/254790019763" target="_blank" rel="noopener"><svg class="ic"><use href="#i-wa"/></svg> WhatsApp</a></li>
+                        <li><a href="mailto:info@mwastech.com"><svg class="ic"><use href="#i-mail"/></svg> info@mwastech.com</a></li>
+                    </ul>
+                    <div class="socials">
+                        <a href="https://www.facebook.com/people/Mwastech/61567382582246/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="ic"><use href="#i-fb"/></svg></a>
+                        <a href="https://www.youtube.com/channel/UCVB9tlI_QdvpJxIJPR1wg_Q" target="_blank" rel="noopener" aria-label="YouTube"><svg class="ic"><use href="#i-yt"/></svg></a>
+                        <a href="https://www.tiktok.com/@mwastech254kenyagmail.co" target="_blank" rel="noopener" aria-label="TikTok"><svg class="ic"><use href="#i-tt"/></svg></a>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
+                </div>
+
+                <form class="quote-form reveal" id="quoteForm" novalidate>
+                    <div class="field">
+                        <label for="fName">Name</label>
+                        <input id="fName" name="name" type="text" autocomplete="name" required>
                     </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone">
+                    <div class="field-row">
+                        <div class="field">
+                            <label for="fPhone">Phone</label>
+                            <input id="fPhone" name="phone" type="tel" autocomplete="tel" placeholder="07XX XXX XXX">
+                        </div>
+                        <div class="field">
+                            <label for="fTown">Town</label>
+                            <input id="fTown" name="town" type="text">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="product">Interested Product</label>
-                        <select id="product" name="product">
-                            <option value="">Select a product</option>
-                            <option value="100L Milk Vending Machine">100L Milk Vending Machine</option>
-                            <option value="300L Touch Screen Milk Vending Machine">300L Touch Screen Milk Vending Machine</option>
-                            <option value="Milk Dispensing ATM">Milk Dispensing ATM</option>
-                            <option value="Cooking Oil Vending Machine">Cooking Oil Vending Machine</option>
-                            <option value="Water Vending Machine">Water Vending Machine</option>
-                            <option value="Custom Solution">Custom Solution</option>
+                    <div class="field">
+                        <label for="fProduct">Machine</label>
+                        <select id="fProduct" name="product">
+                            <option>Water vending station</option>
+                            <option>Refill station</option>
+                            <option>Twin-bay kiosk</option>
+                            <option>Milk ATM</option>
+                            <option>Cooking oil vending</option>
+                            <option>Not sure yet</option>
                         </select>
                     </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your vending machine needs..."></textarea>
+                    <div class="field">
+                        <label for="fMsg">Message <span class="opt">(optional)</span></label>
+                        <textarea id="fMsg" name="message" rows="3"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send Inquiry</button>
+                    <p class="form-error" id="formError" role="alert"></p>
+                    <button class="btn btn-sun btn-block" type="submit"><svg class="ic"><use href="#i-wa"/></svg> Send on WhatsApp</button>
+                    <p class="form-alt"><a href="mailto:info@mwastech.com" id="mailAlt">Or send by email</a></p>
                 </form>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>MWASTECH TECHNOLOGIES</h3>
-                    <p>Your trusted partner for premium vending machine solutions. Quality, reliability, and service excellence.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#products">Products</a></li>
-                        <li><a href="#features">Features</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li>Machine Sales</li>
-                        <li>Installation</li>
-                        <li>Maintenance</li>
-                        <li>Support</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 MWASTECH TECHNOLOGIES. All rights reserved.</p>
-            </div>
+    <footer class="site-footer" data-tone="ink">
+        <div class="container footer-row">
+            <a href="#top" class="brand">
+                <img src="images/logo-mark.png" alt="" width="32" height="29">
+                <span class="brand-text"><strong>MWASTECH</strong><em>Technologies</em></span>
+            </a>
+            <p>&copy; <span id="year">2026</span> MWASTECH Technologies. Convenience at your fingertips.</p>
         </div>
     </footer>
 
-    <!-- Inquiry Modal -->
-    <div id="inquiryModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Product Inquiry</h3>
-            <form id="inquiryForm">
-                <input type="hidden" id="inquiryProduct" name="product">
-                <div class="form-group">
-                    <label for="inquiryName">Full Name</label>
-                    <input type="text" id="inquiryName" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="inquiryEmail">Email Address</label>
-                    <input type="email" id="inquiryEmail" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="inquiryPhone">Phone Number</label>
-                    <input type="tel" id="inquiryPhone" name="phone">
-                </div>
-                <div class="form-group">
-                    <label for="inquiryMessage">Message</label>
-                    <textarea id="inquiryMessage" name="message" rows="3" placeholder="Please provide details about your requirements..."></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Send Inquiry</button>
-            </form>
-        </div>
-    </div>
+    <a class="wa-fab" href="https://wa.me/254790019763" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+        <svg class="ic"><use href="#i-wa"/></svg>
+    </a>
 
-    <script src="./script.js"></script>
-    
-    <!-- CSS Loading Detection Script -->
-    <script>
-        // Check if external CSS loaded properly
-        function checkCSSLoaded() {
-            try {
-                const testElement = document.createElement('div');
-                testElement.className = 'nav-logo';
-                document.body.appendChild(testElement);
-                
-                const computedStyle = window.getComputedStyle(testElement);
-                const isLoaded = computedStyle.display === 'flex';
-                
-                document.body.removeChild(testElement);
-                
-                if (!isLoaded) {
-                    console.warn('External CSS not loaded, applying fallback styles');
-                    loadFallbackCSS();
-                }
-            } catch (e) {
-                console.warn('CSS check failed, loading fallback');
-                loadFallbackCSS();
-            }
-        }
-        
-        function loadFallbackCSS() {
-            const style = document.createElement('style');
-            style.textContent = `
-                body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; }
-                .navbar { background: linear-gradient(90deg, rgba(255, 182, 193, 0.95) 0%, rgba(135, 206, 235, 0.95) 25%, rgba(224, 246, 255, 0.95) 50%, rgba(152, 251, 152, 0.95) 75%, rgba(255, 228, 181, 0.95) 100%); padding: 1rem; position: fixed; top: 0; width: 100%; z-index: 1000; }
-                .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-                .nav-logo { display: flex; align-items: center; gap: 0.5rem; }
-                .nav-logo h2 { color: #1e293b; margin: 0; font-size: 1.2rem; }
-                .logo-image { height: 35px; width: auto; }
-                .nav-menu { display: flex; list-style: none; gap: 1rem; margin: 0; padding: 0; }
-                .nav-link { text-decoration: none; color: #1e293b; padding: 0.5rem 1rem; background: rgba(255,255,255,0.3); border-radius: 6px; }
-                .hamburger { display: none; flex-direction: column; cursor: pointer; }
-                .bar { width: 25px; height: 3px; background: #1e293b; margin: 3px 0; }
-                .hero { padding: 120px 20px 80px; background: linear-gradient(135deg, #FFB6C1 0%, #87CEEB 25%, #E0F6FF 50%, #98FB98 75%, #FFE4B5 100%); min-height: 100vh; }
-                .hero-container { max-width: 1200px; margin: 0 auto; text-align: center; }
-                .hero-content h1 { font-size: 2rem; margin-bottom: 1rem; color: #1e293b; }
-                .hero-tagline { color: #f59e0b; font-weight: bold; margin-bottom: 1rem; }
-                .btn { padding: 14px 28px; background: #2563eb; color: white; text-decoration: none; border-radius: 8px; display: inline-block; margin: 0.5rem; }
-                .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
-                .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0; }
-                .product-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-                .product-image { height: 250px; overflow: hidden; }
-                .product-image img { width: 100%; height: 100%; object-fit: cover; }
-                .product-content { padding: 1.5rem; }
-                .contact { padding: 2rem 0; background: white; }
-                .contact-form { background: #f8fafc; padding: 2rem; border-radius: 12px; }
-                .form-group { margin-bottom: 1rem; }
-                .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; }
-                .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; }
-                .footer { background: #1e293b; color: white; padding: 2rem 0; }
-                @media (max-width: 768px) {
-                    .nav-menu { display: none; }
-                    .hamburger { display: flex; }
-                    .hero-content h1 { font-size: 1.5rem; }
-                    .products-grid { grid-template-columns: 1fr; }
-                }
-            `;
-            document.head.appendChild(style);
-        }
-        
-        // Check CSS loading after page load
-        window.addEventListener('load', function() {
-            setTimeout(checkCSSLoaded, 100);
-        });
-        
-        // Also check immediately in case load event already fired
-        if (document.readyState === 'complete') {
-            setTimeout(checkCSSLoaded, 100);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
