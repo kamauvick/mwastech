@@ -339,7 +339,15 @@ html.flow .contact { --sheet-x: 28px; --sheet-r: 44px; clip-path: inset(0 calc(v
     .container { padding: 0 20px; }
     .section-title { margin-bottom: 36px; }
     .hero-art { height: 340px; }
-    .hero { --gutter: 20px; }
+    /* small screens: product first, then a compact headline and the button; the tagline steps aside */
+    .hero { --gutter: 20px; padding: calc(var(--header-h) + 4px) 0 28px; }
+    .drop-outline { display: none; }
+    .hero-art { order: 1; height: 330px; }
+    /* size the drawing by the panel height (its aspect-ratio sets the width) so it never spills onto the headline */
+    .hero-machine { top: 4%; height: 90%; width: auto; max-width: 92%; }
+    .hero h1 { order: 2; font-size: 36px; margin-top: 20px; }
+    .hero .lead { display: none; }
+    .hero .btn { order: 3; margin-top: 20px; }
     .shop-grid { gap: 36px 16px; }
     .shop-name { font-size: 16px; margin-top: 12px; }
     .shop-sub { font-size: 13.5px; }
